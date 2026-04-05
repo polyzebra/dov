@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-  <section className="relative overflow-hidden bg-white pb-20 pt-16 sm:pb-24 sm:pt-24 lg:pt-28 animate-fade-in">
+  <section className="relative overflow-hidden bg-white pb-24 pt-16 sm:pb-24 sm:pt-24 lg:pt-28 animate-fade-in">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-x-0 top-0 h-130 bg-linear-to-b from-sky-100 via-white to-white" />
         <div className="absolute -left-44 top-4 h-80 w-80 rounded-full bg-sky-200/70 blur-3xl" />
@@ -10,8 +10,8 @@ export default function Hero() {
       </div>
   <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-4 sm:gap-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-10">
-          <div className="space-y-5">
-            <h1 className="text-[2.5rem] leading-tight font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl">
+          <div className="space-y-6 sm:space-y-5">
+            <h1 className="text-[2.5rem] leading-snug font-semibold tracking-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl xl:text-7xl">
               Professional Drone Services in Ireland
             </h1>
             <p className="max-w-xl text-[1.05rem] leading-7 text-slate-600 sm:text-lg">
@@ -22,7 +22,12 @@ export default function Hero() {
             <Button href="/contact" size="lg" className="h-12 px-10">
               Request a Quote
             </Button>
-            <Button href="/services" variant="secondary" size="lg" className="h-12 px-10">
+            <Button
+              href="/services"
+              variant="secondary"
+              size="lg"
+              className="h-12 px-10 border-slate-300 sm:border-slate-200"
+            >
               View Services
             </Button>
           </div>
