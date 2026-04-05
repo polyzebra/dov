@@ -1,0 +1,77 @@
+import type { ReactNode } from "react";
+import SectionTitle from "@/components/ui/SectionTitle";
+
+type ContentSplitProps = {
+  eyebrow?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
+  points?: string[];
+  badge?: string;
+  highlightTitle?: string;
+  highlightSubtitle?: string;
+  reverse?: boolean;
+};
+
+export default function ContentSplit({
+  eyebrow,
+  title,
+  subtitle,
+  points,
+  badge,
+  highlightTitle,
+  highlightSubtitle,
+  reverse = false,
+}: ContentSplitProps) {
+  return (
+    <section className="bg-white py-20 animate-fade-in">
+      <div
+        className={`mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] ${
+          reverse ? "lg:[&>div:first-child]:order-2" : ""
+        }`}
+      >
+        <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-8 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.7)]">
+          <div className="absolute -left-16 -top-16 h-32 w-32 rounded-full bg-sky-200/70 blur-3xl" />
+          <div className="absolute -right-10 bottom-0 h-32 w-32 rounded-full bg-indigo-200/70 blur-3xl" />
+          <div className="relative z-10 space-y-5">
+            {badge ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-500">
+                {badge}
+              </p>
+            ) : null}
+            <div className="rounded-2xl border border-white/60 bg-white/80 p-5 shadow-[0_20px_40px_-30px_rgba(15,23,42,0.35)]">
+              <p className="text-lg font-semibold text-slate-900">
+                {highlightTitle ?? "Mission-ready flight plan"}
+              </p>
+              <p className="mt-2 text-sm text-slate-600">
+                {highlightSubtitle ??
+                  "We combine licensed pilots with modern capture workflows for consistent results."}
+              </p>
+            </div>
+            {points?.length ? (
+              <ul className="grid gap-3 text-sm text-slate-600">
+                {points.map((point) => (
+                  <li key={point} className="flex items-start gap-3">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-sky-100 text-sky-600">
+                      <svg
+                        aria-hidden="true"
+                        className="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
