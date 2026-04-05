@@ -3,19 +3,29 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 const services = [
   {
-    title: "Real Estate",
-    description: "High-quality aerial visuals for property marketing.",
-  icon: Buildings,
+    title: "Aerial Photography",
+    description: "Crisp aerial photography for property and commercial showcases.",
+    icon: Buildings,
   },
   {
-    title: "Inspections",
-    description: "Efficient roof, site, and structure inspection footage.",
-  icon: Crosshair,
+    title: "Drone Video Production",
+    description: "Cinematic drone video for campaigns, launches, and storytelling.",
+    icon: VideoCamera,
   },
   {
-    title: "Aerial Video",
-    description: "Cinematic drone footage for brands and businesses.",
-  icon: VideoCamera,
+    title: "Roof & Building Inspections",
+    description: "Detailed inspection visuals that capture roofs, facades, and sites.",
+    icon: Crosshair,
+  },
+  {
+    title: "Construction Monitoring",
+    description: "Progress tracking and reporting for construction stakeholders.",
+    icon: Buildings,
+  },
+  {
+    title: "Property & Land Surveys",
+    description: "Mapping-ready drone data for land surveys and planning.",
+    icon: Crosshair,
   },
 ];
 
@@ -25,8 +35,8 @@ export default function Services() {
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionTitle
           eyebrow="Services"
-          title="Drone services crafted for modern businesses"
-          subtitle="Whether you need elegant property marketing or technical inspection footage, our team delivers precise aerial results."
+          title="Reliable Drone Services Across Ireland"
+          subtitle="Trusted drone services Ireland teams rely on for aerial photography Ireland, drone video Ireland, inspections, and mapping."
         />
   <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 md:grid-cols-3">
           {services.map((service) => {

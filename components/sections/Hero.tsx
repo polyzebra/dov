@@ -15,7 +15,7 @@ export default function Hero() {
               Professional Drone Services in Ireland
             </h1>
             <p className="max-w-xl text-[1.05rem] leading-7 text-slate-600 sm:text-lg">
-              Aerial video, property marketing, and inspections delivered fast across Ireland.
+              DOV Drone provides professional drone services across Ireland, delivering high-quality aerial photography, video production, inspections and mapping solutions.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">

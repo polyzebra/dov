@@ -15,7 +15,7 @@ export default function ContactSection({
   id = "contact",
   eyebrow = "Contact",
   title = "Request a quote today",
-  subtitle = "Tell us about your project and we&apos;ll respond quickly with a tailored proposal.",
+  subtitle = "We provide drone services across Ireland including Dublin, Cork, Limerick and Galway. Contact us today for a free quote.",
 }: ContactSectionProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
