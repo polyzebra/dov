@@ -67,7 +67,11 @@ export default function Header() {
             </span>
             <span className="flex flex-col">
               <span className="text-xl font-semibold tracking-tight">DOV</span>
-              <span className="mt-1 text-[0.65rem] font-medium uppercase tracking-[0.45em] text-slate-500">
+              <span className="mt-0.5 flex flex-col text-[0.65rem] font-medium uppercase tracking-[0.45em] text-slate-500 leading-tight md:hidden">
+                <span>Drone</span>
+                <span className="mt-0.5">Services</span>
+              </span>
+              <span className="mt-1 hidden text-[0.65rem] font-medium uppercase tracking-[0.45em] text-slate-500 md:block">
                 Drone Services
               </span>
             </span>
