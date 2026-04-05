@@ -65,7 +65,7 @@ export default function Header() {
                 priority
               />
             </span>
-            <span className="flex flex-col">
+            <span className="flex flex-col items-start">
               <span className="text-xl font-semibold tracking-tight">DOV</span>
               <span className="mt-px flex flex-col text-[0.65rem] font-medium uppercase tracking-[0.45em] text-slate-500 leading-tight md:hidden">
                 <span>Drone</span>
