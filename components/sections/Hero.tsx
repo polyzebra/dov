@@ -11,18 +11,18 @@ export default function Hero() {
   <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-4 sm:gap-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-10">
           <div className="space-y-5">
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="text-[2.5rem] leading-tight font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-7xl">
               Professional Drone Services in Ireland
             </h1>
-            <p className="max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+            <p className="max-w-xl text-[1.05rem] leading-7 text-slate-600 sm:text-lg">
               Aerial video, property marketing, and inspections delivered fast across Ireland.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button href="/contact" size="lg" className="px-10">
+            <Button href="/contact" size="lg" className="h-12 px-10">
               Request a Quote
             </Button>
-            <Button href="/services" variant="secondary" size="lg" className="px-9">
+            <Button href="/services" variant="secondary" size="lg" className="h-12 px-10">
               View Services
             </Button>
           </div>

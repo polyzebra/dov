@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle } from "@phosphor-icons/react/ssr";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 const highlights = [
@@ -25,7 +25,7 @@ export default function About() {
             {highlights.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
                 <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-sky-100 text-sky-600">
-                  <CheckCircle2 className="h-4 w-4" />
+                  <CheckCircle size={16} className="h-4 w-4" />
                 </span>
                 <span>{item}</span>
               </li>

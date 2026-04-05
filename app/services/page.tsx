@@ -1,4 +1,11 @@
-import { Building2, Calendar, Hammer, MapPinned, Radar, Video } from "lucide-react";
+import {
+  Buildings,
+  Calendar,
+  Hammer,
+  MapPin,
+  Crosshair,
+  VideoCamera,
+} from "@phosphor-icons/react/ssr";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import CTASection from "@/components/sections/CTASection";
@@ -10,42 +17,42 @@ const services = [
   {
     title: "Real Estate",
     description: "High-end aerial visuals tailored for property marketing and sales launches.",
-    icon: Building2,
+  icon: Buildings,
     tag: "Popular",
     linkLabel: "Explore packages",
   },
   {
     title: "Inspections",
     description: "Roof, infrastructure, and asset inspections with precise documentation.",
-    icon: Radar,
+  icon: Crosshair,
     tag: "Precision",
     linkLabel: "View capabilities",
   },
   {
     title: "Aerial Video",
     description: "Cinematic captures for brands, hospitality, and tourism campaigns.",
-    icon: Video,
+  icon: VideoCamera,
     tag: "Cinematic",
     linkLabel: "See examples",
   },
   {
     title: "Construction Progress",
     description: "Consistent site updates with repeatable flight paths and reporting.",
-    icon: Hammer,
+  icon: Hammer,
     tag: "Progress",
     linkLabel: "Plan coverage",
   },
   {
     title: "Events & Activations",
     description: "Dynamic aerial coverage for launches, festivals, and live moments.",
-    icon: Calendar,
+  icon: Calendar,
     tag: "Live",
     linkLabel: "Book coverage",
   },
   {
     title: "Tourism Marketing",
     description: "Showcase destinations and venues with expansive aerial storytelling.",
-    icon: MapPinned,
+  icon: MapPin,
     tag: "Ireland",
     linkLabel: "Get a concept",
   },

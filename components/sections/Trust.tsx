@@ -1,20 +1,20 @@
-import { Globe2, Timer, Zap } from "lucide-react";
+import { Globe, Clock, Lightning } from "@phosphor-icons/react/ssr";
 
 const indicators = [
   {
     label: "300+ Projects",
     description: "Trusted by property and business clients.",
-    icon: Zap,
+  icon: Lightning,
   },
   {
     label: "24–48h Turnaround",
     description: "Fast delivery without compromising quality.",
-    icon: Timer,
+  icon: Clock,
   },
   {
     label: "Nationwide Coverage",
     description: "Ireland-wide service from Dublin to Galway.",
-    icon: Globe2,
+  icon: Globe,
   },
 ];
 
@@ -31,7 +31,7 @@ export default function Trust() {
                 className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-600 shadow-[0_18px_36px_-32px_rgba(15,23,42,0.5)] sm:p-5"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-sky-600 shadow-sm">
-                  <Icon className="h-5 w-5" />
+                  <Icon size={20} className="h-5 w-5" />
                 </span>
                 <div>
                   <p className="text-base font-semibold text-slate-900">{item.label}</p>

@@ -223,7 +223,6 @@ export default function ContactSection({
             <div className="mt-10 rounded-2xl border border-white/70 bg-white/85 p-4 text-xs text-slate-500 shadow-[0_18px_30px_-24px_rgba(15,23,42,0.4)] sm:p-5">
               <p className="font-semibold text-slate-900">Availability</p>
               <p className="mt-1">Dublin · Cork · Galway · Nationwide</p>
-              <p className="mt-2">devdrone@gmail.com</p>
             </div>
           </div>
         </div>

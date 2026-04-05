@@ -1,10 +1,13 @@
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
+import type { IconProps } from "@phosphor-icons/react";
 import SectionTitle from "@/components/ui/SectionTitle";
+
+type PhosphorIcon = ComponentType<IconProps>;
 
 type FeatureItem = {
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: PhosphorIcon;
   tag?: string;
   linkLabel?: string;
 };
@@ -39,7 +42,7 @@ export default function FeatureGrid({
                 className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.45)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_80px_-35px_rgba(14,116,144,0.65)] sm:p-8"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-sky-100 to-indigo-100 text-sky-600 transition-colors group-hover:from-sky-200 group-hover:to-indigo-200">
-                  <Icon className="h-6 w-6" />
+                  <Icon size={24} className="h-6 w-6" />
                 </div>
                 {item.tag ? (
                   <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-sky-500">
