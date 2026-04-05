@@ -17,7 +17,7 @@ const policyLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200/70 bg-slate-50">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-12 md:flex-row md:items-start md:justify-between">
+  <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-10 sm:px-6 sm:py-12 md:flex-row md:items-start md:justify-between">
         <div className="space-y-3">
           <Link href="/" className="flex items-center gap-3">
             <span className="relative flex h-12 w-12 items-center justify-center">
@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-slate-200/70">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 text-xs text-slate-500">
+  <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 text-xs text-slate-500 sm:px-6">
           <span>© 2026 DOV Drone. All rights reserved.</span>
           <span>Designed for modern aerial brands.</span>
         </div>

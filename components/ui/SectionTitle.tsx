@@ -17,7 +17,7 @@ export default function SectionTitle({
     align === "center" ? "items-center text-center" : "items-start text-left";
 
   return (
-  <div className={`flex flex-col gap-4 ${alignment}`}>
+  <div className={`flex flex-col gap-3 sm:gap-4 ${alignment}`}>
       {eyebrow ? (
         <span className="text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-sky-500">
           {eyebrow}

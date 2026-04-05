@@ -14,12 +14,12 @@ export default function Header() {
   return (
   <header className="sticky top-0 z-50 border-b border-slate-100/80 bg-white/85 backdrop-blur">
       <div className="hidden bg-linear-to-r from-sky-600 via-sky-500 to-indigo-500 text-white sm:block">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-2 text-xs font-medium">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-2 text-xs font-medium sm:px-6">
           <span>Modern aerial visuals for Ireland&apos;s leading businesses.</span>
           <span className="text-white/80">Now booking spring projects</span>
         </div>
       </div>
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+  <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 sm:py-5">
         <Link
           href="/"
           className="flex items-center gap-3 leading-none text-slate-900"

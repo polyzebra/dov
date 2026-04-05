@@ -10,14 +10,14 @@ const highlights = [
 
 export default function About() {
   return (
-  <section id="about" className="bg-white py-20 animate-fade-in">
-      <div className="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+  <section id="about" className="bg-white py-16 animate-fade-in sm:py-20">
+    <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <SectionTitle
           eyebrow="Why DOV Drone"
           title="Modern drone services built on quality and reliability"
           subtitle="DOV Drone provides modern drone services in Ireland with a focus on quality, reliability, and clean visual results for businesses and property clients."
         />
-        <div className="rounded-3xl border border-slate-200/70 bg-slate-50/70 p-8 shadow-[0_30px_60px_-45px_rgba(15,23,42,0.7)]">
+  <div className="rounded-3xl border border-slate-200/70 bg-slate-50/70 p-6 shadow-[0_30px_60px_-45px_rgba(15,23,42,0.7)] sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-500">
             Trusted Process
           </p>

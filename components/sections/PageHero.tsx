@@ -29,13 +29,13 @@ export default function PageHero({
   const actions = [primaryAction, secondaryAction].filter(Boolean) as HeroAction[];
 
   return (
-    <section className="relative overflow-hidden bg-white pb-16 pt-16 sm:pt-20 animate-fade-in">
+  <section className="relative overflow-hidden bg-white pb-14 pt-12 sm:pb-16 sm:pt-20 animate-fade-in">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-x-0 top-0 h-120 bg-linear-to-b from-sky-100 via-white to-white" />
         <div className="absolute -left-40 top-10 h-72 w-72 rounded-full bg-sky-200/70 blur-3xl" />
         <div className="absolute right-0 top-8 h-96 w-96 rounded-full bg-indigo-200/60 blur-3xl" />
       </div>
-      <div className="mx-auto w-full max-w-6xl px-6">
+  <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className={align === "center" ? "mx-auto max-w-3xl" : "max-w-3xl"}>
           <SectionTitle
             eyebrow={eyebrow}

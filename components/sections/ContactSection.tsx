@@ -40,7 +40,7 @@ export default function ContactSection({
       company: String(formData.get("company") || "").trim(),
     };
 
-    if (!payload.name || !payload.email || !payload.phone || !payload.service || !payload.message) {
+    if (!payload.name || !payload.email || !payload.service || !payload.message) {
       setError("Please complete all required fields before submitting.");
       setIsSubmitting(false);
       return;
@@ -80,14 +80,14 @@ export default function ContactSection({
   };
 
   return (
-    <section id={id} className="animate-fade-in bg-slate-50/70 py-28">
-      <div className="mx-auto w-full max-w-6xl px-6">
+    <section id={id} className="animate-fade-in bg-slate-50/70 py-20 sm:py-28">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mt-10 grid gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-slate-200/70 bg-white p-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.7)]"
+            className="rounded-3xl border border-slate-200/70 bg-white p-6 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.7)] sm:p-8 lg:p-12"
           >
             <div className="grid gap-6 sm:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm font-medium text-slate-700">
@@ -105,7 +105,7 @@ export default function ContactSection({
                 Email
                 <input
                   className="h-12 rounded-xl border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
-                  placeholder="dovdrone@gmail.com"
+                  placeholder="your@email.com"
                   type="email"
                   name="email"
                   required
@@ -116,10 +116,9 @@ export default function ContactSection({
                 Phone
                 <input
                   className="h-12 rounded-xl border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
-                  placeholder="+353 1 234 5678"
+                  placeholder="Phone number (optional)"
                   type="tel"
                   name="phone"
-                  required
                 />
               </label>
 
@@ -127,7 +126,7 @@ export default function ContactSection({
                 Service
                 <div className="relative">
                   <select
-                    className="h-12 w-full appearance-none rounded-xl border border-slate-200 bg-slate-50/70 px-4 pr-10 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
+                    className="h-12 w-full min-w-56 max-w-full appearance-none rounded-xl border border-slate-200 bg-slate-50/70 px-4 pr-10 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
                     name="service"
                     defaultValue=""
                     required
@@ -162,7 +161,7 @@ export default function ContactSection({
               Message
               <textarea
                 className="min-h-35 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
-                placeholder="Tell us about your project goals."
+                placeholder="Tell us what you need filmed, where it is, and when."
                 name="message"
                 required
               />
@@ -207,7 +206,7 @@ export default function ContactSection({
             ) : null}
           </form>
 
-          <div className="flex flex-col justify-between rounded-3xl border border-sky-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-9 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.75)]">
+          <div className="flex flex-col justify-between rounded-3xl border border-sky-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-6 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.75)] sm:p-8 lg:p-9">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-500">
                 DOV Drone
@@ -221,7 +220,7 @@ export default function ContactSection({
               </p>
             </div>
 
-            <div className="mt-10 rounded-2xl border border-white/70 bg-white/85 p-5 text-xs text-slate-500 shadow-[0_18px_30px_-24px_rgba(15,23,42,0.4)]">
+            <div className="mt-10 rounded-2xl border border-white/70 bg-white/85 p-4 text-xs text-slate-500 shadow-[0_18px_30px_-24px_rgba(15,23,42,0.4)] sm:p-5">
               <p className="font-semibold text-slate-900">Availability</p>
               <p className="mt-1">Dublin · Cork · Galway · Nationwide</p>
               <p className="mt-2">devdrone@gmail.com</p>

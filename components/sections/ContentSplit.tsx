@@ -23,14 +23,14 @@ export default function ContentSplit({
   reverse = false,
 }: ContentSplitProps) {
   return (
-    <section className="bg-white py-20 animate-fade-in">
+    <section className="bg-white py-16 animate-fade-in sm:py-20">
       <div
-        className={`mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] ${
+        className={`mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] ${
           reverse ? "lg:[&>div:first-child]:order-2" : ""
         }`}
       >
         <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
-        <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-8 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.7)]">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-6 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.7)] sm:p-8">
           <div className="absolute -left-16 -top-16 h-32 w-32 rounded-full bg-sky-200/70 blur-3xl" />
           <div className="absolute -right-10 bottom-0 h-32 w-32 rounded-full bg-indigo-200/70 blur-3xl" />
           <div className="relative z-10 space-y-5">
@@ -39,7 +39,7 @@ export default function ContentSplit({
                 {badge}
               </p>
             ) : null}
-            <div className="rounded-2xl border border-white/60 bg-white/80 p-5 shadow-[0_20px_40px_-30px_rgba(15,23,42,0.35)]">
+            <div className="rounded-2xl border border-white/60 bg-white/80 p-4 shadow-[0_20px_40px_-30px_rgba(15,23,42,0.35)] sm:p-5">
               <p className="text-lg font-semibold text-slate-900">
                 {highlightTitle ?? "Mission-ready flight plan"}
               </p>

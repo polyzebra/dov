@@ -21,14 +21,14 @@ export default function GalleryGrid({
   items,
 }: GalleryGridProps) {
   return (
-    <section className="bg-slate-50/60 py-20 animate-fade-in">
-      <div className="mx-auto w-full max-w-6xl px-6">
+    <section className="bg-slate-50/60 py-16 animate-fade-in sm:py-20">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+  <div className="mt-10 grid gap-6 sm:mt-14 md:grid-cols-3">
           {items.map((item) => (
             <div
               key={item.title}
-              className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-[0_24px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_80px_-38px_rgba(14,116,144,0.6)]"
+              className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-5 shadow-[0_24px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_80px_-38px_rgba(14,116,144,0.6)] sm:p-6"
             >
               <div className="relative h-36 overflow-hidden rounded-2xl border border-white/70 bg-linear-to-br from-sky-100 via-white to-indigo-100">
                 <div className="absolute -left-8 -top-10 h-24 w-24 rounded-full bg-sky-200/70 blur-2xl" />

@@ -19,14 +19,14 @@ export default function FAQSection({
   items,
 }: FAQSectionProps) {
   return (
-    <section className="bg-white py-20 animate-fade-in">
-      <div className="mx-auto w-full max-w-6xl px-6">
+    <section className="bg-white py-16 animate-fade-in sm:py-20">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
-        <div className="mt-12 grid gap-5">
+  <div className="mt-10 grid gap-5 sm:mt-12">
           {items.map((item) => (
             <details
               key={item.question}
-              className="group rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_20px_50px_-40px_rgba(15,23,42,0.4)] transition-all open:border-sky-200/70 open:shadow-[0_28px_60px_-35px_rgba(14,116,144,0.55)]"
+              className="group rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_20px_50px_-40px_rgba(15,23,42,0.4)] transition-all open:border-sky-200/70 open:shadow-[0_28px_60px_-35px_rgba(14,116,144,0.55)] sm:p-6"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-semibold text-slate-900">
                 <span>{item.question}</span>
