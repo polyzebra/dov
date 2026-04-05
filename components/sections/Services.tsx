@@ -1,31 +1,42 @@
-import { Buildings, Crosshair, VideoCamera } from "@phosphor-icons/react/ssr";
+import { Buildings, Calendar, Crosshair, MapTrifold, VideoCamera, Wrench } from "@phosphor-icons/react/ssr";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 const services = [
   {
     title: "Aerial Photography",
-    description: "Crisp aerial photography for property and commercial showcases.",
+    description:
+      "High-resolution aerial photography for real estate, commercial and marketing use across Ireland.",
     icon: Buildings,
   },
   {
     title: "Drone Video Production",
-    description: "Cinematic drone video for campaigns, launches, and storytelling.",
+    description:
+      "Cinematic drone video production for brands, campaigns and property showcases.",
     icon: VideoCamera,
   },
   {
     title: "Roof & Building Inspections",
-    description: "Detailed inspection visuals that capture roofs, facades, and sites.",
+    description:
+      "Accurate drone inspections for roofs, buildings and infrastructure with clear visual reporting.",
     icon: Crosshair,
   },
   {
     title: "Construction Monitoring",
-    description: "Progress tracking and reporting for construction stakeholders.",
-    icon: Buildings,
+    description:
+      "Data-driven construction monitoring with regular aerial updates and progress tracking.",
+    icon: Wrench,
   },
   {
     title: "Property & Land Surveys",
-    description: "Mapping-ready drone data for land surveys and planning.",
-    icon: Crosshair,
+    description:
+      "Mapping-ready drone surveys for land analysis, planning and development projects.",
+    icon: MapTrifold,
+  },
+  {
+    title: "Drone Event Coverage",
+    description:
+      "Professional drone coverage for events, festivals and live experiences across Ireland.",
+    icon: Calendar,
   },
 ];
 

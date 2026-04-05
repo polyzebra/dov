@@ -91,7 +91,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-slate-700 transition-colors duration-300 ease-out hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-blue-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                className="relative text-slate-700 transition-all duration-200 ease-out hover:text-sky-600 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
               >
                 {link.label}
               </Link>
@@ -171,7 +171,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full rounded-xl px-4 py-3 text-[17px] font-medium text-slate-900 transition-all duration-200 hover:bg-slate-100 active:bg-slate-200 ${
+                className={`block w-full rounded-xl px-4 py-3 text-[17px] font-medium text-slate-900 transition-all duration-200 hover:bg-slate-100 hover:text-sky-600 hover:translate-x-0.5 active:bg-slate-200 active:opacity-80 ${
                   pathname === link.href ? "text-blue-600" : ""
                 }`}
               >
