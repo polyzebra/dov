@@ -22,7 +22,7 @@ export default function Header() {
   useEffect(() => {
     if (!isMobileMenuOpen) {
       document.body.style.overflow = "";
-      return undefined;
+      return;
     }
 
     const previousOverflow = document.body.style.overflow;
@@ -51,7 +51,9 @@ export default function Header() {
             <span className="text-white/80">Now booking spring projects</span>
           </div>
         </div>
+
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5">
+          {/* LOGO */}
           <Link
             href="/"
             className="flex min-w-0 items-center gap-3 leading-none text-slate-900"
@@ -65,17 +67,25 @@ export default function Header() {
                 priority
               />
             </span>
-            <span className="flex flex-col items-start">
+
+            {/* TEXT BLOCK (FIXED ALIGNMENT) */}
+            <span className="flex flex-col items-start leading-none">
               <span className="text-xl font-semibold tracking-tight">DOV</span>
-              <span className="mt-px flex flex-col text-[0.65rem] font-medium uppercase tracking-[0.45em] text-slate-500 leading-tight md:hidden">
+
+              {/* MOBILE */}
+              <span className="mt-0.6 flex flex-col text-[0.65rem] font-medium uppercase tracking-[0.28em] text-slate-500 md:hidden">
                 <span>Drone</span>
-                <span className="mt-0.5">Services</span>
+                <span>Services</span>
               </span>
-              <span className="mt-1 hidden text-[0.65rem] font-medium uppercase tracking-[0.45em] text-slate-500 md:block">
+
+              {/* DESKTOP */}
+              <span className="mt-1 hidden text-[0.65rem] font-medium uppercase tracking-[0.35em] text-slate-500 md:block">
                 Drone Services
               </span>
             </span>
           </Link>
+
+          {/* DESKTOP NAV */}
           <nav className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
             {navLinks.map((link) => (
               <Link
@@ -87,11 +97,15 @@ export default function Header() {
               </Link>
             ))}
           </nav>
+
+          {/* DESKTOP CTA */}
           <div className="hidden items-center gap-3 md:flex">
             <Button href="/contact" size="md" className="px-7">
               Get a Quote
             </Button>
           </div>
+
+          {/* MOBILE */}
           <div className="flex shrink-0 items-center gap-3 md:hidden">
             <Button href="/contact" size="md" className="h-11 px-5 text-[15px]">
               Get a Quote
@@ -108,6 +122,7 @@ export default function Header() {
         </div>
       </header>
 
+      {/* OVERLAY */}
       <div
         aria-hidden={!isMobileMenuOpen}
         className={`fixed inset-0 z-40 bg-slate-900/25 backdrop-blur-md transition-opacity duration-300 ease-out md:hidden ${
@@ -116,8 +131,9 @@ export default function Header() {
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
+      {/* MOBILE MENU */}
       <aside
-          className={`fixed right-0 top-0 z-50 h-full w-[85%] max-w-95 transform bg-white/90 backdrop-blur-xl border-l border-slate-200 shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed right-0 top-0 z-50 h-full w-[85%] max-w-95 transform bg-white/90 backdrop-blur-xl border-l border-slate-200 shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-out md:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -138,6 +154,7 @@ export default function Header() {
               </span>
               <span className="text-lg font-semibold tracking-tight">DOV</span>
             </Link>
+
             <button
               type="button"
               aria-label="Close menu"
