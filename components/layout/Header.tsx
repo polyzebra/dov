@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { List, X } from "@phosphor-icons/react";
+import { List } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
+import MobileMenu from "@/components/layout/MobileMenu";
 
 const navLinks = [
   { label: "Services", href: "/services" },
@@ -91,7 +92,11 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-slate-700 transition-all duration-200 ease-out hover:text-sky-600 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                className={`relative text-slate-700 transition-all duration-200 ease-out hover:text-sky-600 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 ${
+                  pathname === link.href
+                    ? "text-sky-600 after:scale-x-100"
+                    : ""
+                }`}
               >
                 {link.label}
               </Link>
@@ -122,71 +127,11 @@ export default function Header() {
         </div>
       </header>
 
-      {/* OVERLAY */}
-      <div
-        aria-hidden={!isMobileMenuOpen}
-        className={`fixed inset-0 z-40 bg-slate-900/25 backdrop-blur-md transition-opacity duration-300 ease-out md:hidden ${
-          isMobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
-        onClick={() => setIsMobileMenuOpen(false)}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        pathname={pathname}
       />
-
-      {/* MOBILE MENU */}
-      <aside
-        className={`fixed right-0 top-0 z-50 h-full w-[85%] max-w-95 transform bg-white/90 backdrop-blur-xl border-l border-slate-200 shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-out md:hidden ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex h-full flex-col p-6">
-          <div className="flex items-center justify-between border-b border-slate-200 pb-5">
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-slate-900"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <span className="relative flex h-10 w-10 items-center justify-center">
-                <Image
-                  src="/logo.svg"
-                  alt="DOV Drone"
-                  fill
-                  className="object-contain"
-                />
-              </span>
-              <span className="text-lg font-semibold tracking-tight">DOV</span>
-            </Link>
-
-            <button
-              type="button"
-              aria-label="Close menu"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-900"
-            >
-              <X size={22} weight="bold" />
-            </button>
-          </div>
-
-          <nav className="mt-6 space-y-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full rounded-xl px-4 py-3 text-[17px] font-medium text-slate-900 transition-all duration-200 hover:bg-slate-100 hover:text-sky-600 hover:translate-x-0.5 active:bg-slate-200 active:opacity-80 ${
-                  pathname === link.href ? "text-blue-600" : ""
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="mt-auto border-t border-slate-200 pt-8">
-            <Button href="/contact" className="w-full justify-center">
-              Get a Quote
-            </Button>
-          </div>
-        </div>
-      </aside>
     </>
   );
 }
