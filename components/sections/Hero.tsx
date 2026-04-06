@@ -36,13 +36,12 @@ export default function Hero() {
           <div className="absolute -top-12 left-6 h-24 w-24 rounded-3xl bg-linear-to-br from-sky-400/70 to-indigo-400/70 blur-xl animate-float-slow" />
           <div className="absolute -bottom-6 right-8 h-16 w-16 rounded-full bg-linear-to-br from-indigo-300/70 to-sky-300/70 blur-lg animate-float" />
           <div className="absolute -inset-6 -z-10 rounded-[48px] bg-[radial-gradient(circle_at_top,rgba(186,230,253,0.9),rgba(255,255,255,0)_65%)] blur-3xl" />
-          <div className="relative overflow-hidden rounded-4xl border border-white/60 bg-white/70 p-6 shadow-[0_45px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur animate-float sm:p-8">
+          <div className="relative overflow-hidden rounded-4xl border border-white/60 bg-white/70 p-6 shadow-[0_45px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur sm:p-8">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-semibold text-slate-900">Live Flight Preview</p>
                 <p className="text-xs text-slate-500">Certified pilots • 4K capture</p>
               </div>
-              <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.9)]" />
             </div>
             <div className="mt-6 space-y-4">
               <div className="rounded-2xl border border-slate-200/70 bg-white/80 p-4">
