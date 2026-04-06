@@ -21,7 +21,7 @@ const requiredFields: Array<keyof ContactPayload> = [
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 
 const BUSINESS_EMAIL = "dovdrone@gmail.com";
-const BUSINESS_PHONE_DISPLAY = "0868672333";
+const BUSINESS_PHONE_DISPLAY = "086 867 2333";
 const BUSINESS_PHONE_TEL = "+353868672333";
 const BUSINESS_WHATSAPP = "https://wa.me/353868672333";
 
@@ -63,8 +63,8 @@ const getSafePayload = (payload: Partial<ContactPayload>): ContactPayload => ({
 });
 
 const buildEmailShell = (content: string) => `
-  <div style="margin:0;padding:2px;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;">
-    <div style="width:100%;max-width:720px;margin:0 auto;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;">
+  <div style="margin:0;padding:6px;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;">
+    <div style="width:100%;max-width:720px;margin:0 auto;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;">
       ${content}
     </div>
   </div>
@@ -79,36 +79,36 @@ const buildBrandHeader = ({
   subtitle?: string;
   showLogo?: boolean;
 }) => `
-  <div style="padding:8px 10px;background:#fcfdff;border-bottom:1px solid #e2e8f0;">
+  <div style="padding:10px 12px;background:#fcfdff;border-bottom:1px solid #e2e8f0;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
       <tr>
         ${
           showLogo
             ? `
-        <td style="width:42px;vertical-align:top;padding:0 6px 0 0;">
+        <td style="width:46px;vertical-align:top;padding:0 8px 0 0;">
           <img
             src="${getLogoUrl()}"
             alt="DOV Drone"
-            width="34"
-            height="34"
-            style="display:block;width:34px;height:34px;object-fit:contain;border:0;"
+            width="36"
+            height="36"
+            style="display:block;width:36px;height:36px;object-fit:contain;border:0;"
           />
         </td>
         `
             : ""
         }
         <td style="vertical-align:top;">
-          <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:3px;">
+          <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:3px;">
             DOV Drone
           </div>
 
-          <h1 style="margin:0;font-size:18px;line-height:1.05;letter-spacing:-0.03em;color:#0f172a;font-weight:700;">
+          <h1 style="margin:0;font-size:22px;line-height:1.2;letter-spacing:-0.03em;color:#0f172a;font-weight:700;">
             ${title}
           </h1>
 
           ${
             subtitle
-              ? `<p style="margin:4px 0 0;font-size:12px;line-height:1.45;color:#475569;">
+              ? `<p style="margin:5px 0 0;font-size:13px;line-height:1.55;color:#475569;">
                    ${subtitle}
                  </p>`
               : ""
@@ -120,7 +120,7 @@ const buildBrandHeader = ({
 `;
 
 const buildSectionLabel = (label: string) => `
-  <div style="margin:0 0 4px;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#334155;">
+  <div style="margin:0 0 5px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#334155;">
     ${label}
   </div>
 `;
@@ -129,54 +129,54 @@ const buildInfoTable = (payload: ContactPayload) => {
   const name = escapeHtml(payload.name);
   const email = escapeHtml(payload.email);
   const phone = escapeHtml(payload.phone);
-  const service = escapeHtml(formatServiceLabel(payload.service));
 
   return `
-    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;">
       <tr>
-        <td style="padding:7px 0;width:82px;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Name</td>
-        <td style="padding:7px 0;color:#475569;border-bottom:1px solid #e2e8f0;">${name}</td>
+        <td style="padding:8px 0;width:88px;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Name</td>
+        <td style="padding:8px 0;color:#475569;border-bottom:1px solid #e2e8f0;">${name}</td>
       </tr>
       <tr>
-        <td style="padding:7px 0;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Email</td>
-        <td style="padding:7px 0;color:#475569;border-bottom:1px solid #e2e8f0;">
+        <td style="padding:8px 0;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Email</td>
+        <td style="padding:8px 0;color:#475569;border-bottom:1px solid #e2e8f0;">
           <a href="mailto:${email}" style="color:#2563eb;text-decoration:none;">${email}</a>
         </td>
       </tr>
       <tr>
-        <td style="padding:7px 0;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Phone</td>
-        <td style="padding:7px 0;color:#475569;border-bottom:1px solid #e2e8f0;">
+        <td style="padding:8px 0;font-weight:700;color:#0f172a;vertical-align:top;">Phone</td>
+        <td style="padding:8px 0;color:#475569;">
           <a href="tel:${escapeHtml(payload.phone)}" style="color:#2563eb;text-decoration:none;">${phone}</a>
         </td>
-      </tr>
-      <tr>
-        <td style="padding:7px 0;font-weight:700;color:#0f172a;vertical-align:top;">Service</td>
-        <td style="padding:7px 0;color:#475569;">${service}</td>
       </tr>
     </table>
   `;
 };
 
-const buildMessageCard = (message: string) => `
-  <div style="margin-top:6px;padding:6px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:7px;">
-    ${buildSectionLabel("Message")}
-    <div style="margin:0;font-size:13px;line-height:1.6;color:#475569;">
-      ${escapeHtml(message).replace(/\n/g, "<br />")}
+const buildMessageCard = (message: string) => {
+  const safeMessage = message.trim();
+
+  if (!safeMessage) return "";
+
+  return `
+    <div style="margin-top:8px;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      ${buildSectionLabel("Message")}
+      <div style="margin:0;font-size:14px;line-height:1.65;color:#475569;">
+        ${escapeHtml(safeMessage).replace(/\n/g, "<br />")}
+      </div>
     </div>
-  </div>
-`;
+  `;
+};
 
 const buildContactCard = () => `
-  <div style="margin-top:6px;padding:6px;background:#ffffff;border:1px solid #e2e8f0;border-radius:7px;">
+  <div style="margin-top:10px;padding:10px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;">
     ${buildSectionLabel("Contact")}
-
-    <div style="font-size:13px;line-height:1.65;color:#475569;">
+    <div style="font-size:14px;line-height:1.8;color:#475569;">
       <div>
         Email:
         <a href="mailto:${BUSINESS_EMAIL}" style="color:#2563eb;text-decoration:none;">${BUSINESS_EMAIL}</a>
       </div>
       <div>
-        Tel:
+        Phone:
         <a href="tel:${BUSINESS_PHONE_TEL}" style="color:#2563eb;text-decoration:none;">${BUSINESS_PHONE_DISPLAY}</a>
       </div>
       <div>
@@ -191,13 +191,13 @@ const buildFooter = () => {
   const siteUrl = getSiteUrl();
 
   return `
-    <div style="padding:6px 8px 8px;border-top:1px solid #e2e8f0;background:#fafcff;">
-      <div style="font-size:12px;font-weight:700;color:#0f172a;">DOV Drone</div>
-      <div style="margin-top:4px;font-size:11px;line-height:1.55;color:#64748b;">
+    <div style="padding:10px 12px;border-top:1px solid #e2e8f0;background:#fafcff;">
+      <div style="font-size:13px;font-weight:700;color:#0f172a;">DOV Drone</div>
+      <div style="margin-top:5px;font-size:12px;line-height:1.6;color:#64748b;">
         Aerial visuals, inspections, and drone media<br />
         <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">${siteUrl}</a><br />
         <a href="mailto:${BUSINESS_EMAIL}" style="color:#2563eb;text-decoration:none;">${BUSINESS_EMAIL}</a><br />
-        Tel / WhatsApp:
+        Phone / WhatsApp:
         <a href="tel:${BUSINESS_PHONE_TEL}" style="color:#2563eb;text-decoration:none;">${BUSINESS_PHONE_DISPLAY}</a>
       </div>
     </div>
@@ -206,15 +206,20 @@ const buildFooter = () => {
 
 const buildAdminEmail = (payload: ContactPayload) => {
   const siteUrl = getSiteUrl();
+  const messageText = payload.message.trim()
+    ? `Message: ${payload.message}`
+    : "Message: Not provided";
+
+  const messageCard = buildMessageCard(payload.message);
 
   return {
-    text: `New quote request from the DOV Drone website
+    text: `New enquiry from the DOV Drone website
 
 Name: ${payload.name}
 Email: ${payload.email}
 Phone: ${payload.phone}
 Service: ${formatServiceLabel(payload.service)}
-Message: ${payload.message}
+${messageText}
 
 Business email: ${BUSINESS_EMAIL}
 Phone / WhatsApp: ${BUSINESS_PHONE_DISPLAY}
@@ -222,17 +227,30 @@ Phone / WhatsApp: ${BUSINESS_PHONE_DISPLAY}
 Sent via ${siteUrl}`,
     html: buildEmailShell(`
       ${buildBrandHeader({
-        title: "New quote request",
-        subtitle: "A new request was submitted on the DOV Drone website.",
+        title: "New enquiry received",
+        subtitle: "A new enquiry was submitted on the DOV Drone website.",
       })}
 
-      <div style="padding:6px;">
-        ${buildInfoTable(payload)}
-        ${buildMessageCard(payload.message)}
+      <div style="padding:12px;">
+        <div style="margin-top:0;padding:10px;background:#f8fbff;border:1px solid #dbeafe;border-radius:8px;">
+          ${buildSectionLabel("Requested service")}
+          <div style="margin-top:3px;font-size:16px;line-height:1.35;color:#0f172a;font-weight:700;">
+            ${escapeHtml(formatServiceLabel(payload.service))}
+          </div>
+        </div>
+
+        <div style="margin-top:10px;">
+          ${buildSectionLabel("Customer details")}
+          <div style="padding:10px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;">
+            ${buildInfoTable(payload)}
+            ${messageCard}
+          </div>
+        </div>
+
         ${buildContactCard()}
       </div>
 
-      <div style="padding:6px 8px;border-top:1px solid #e2e8f0;background:#fafcff;font-size:11px;color:#64748b;">
+      <div style="padding:10px 12px;border-top:1px solid #e2e8f0;background:#fafcff;font-size:12px;color:#64748b;">
         Sent via
         <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">DOV Drone website</a>
       </div>
@@ -244,69 +262,76 @@ const buildAutoReplyEmail = (payload: ContactPayload) => {
   const siteUrl = getSiteUrl();
   const safeName = escapeHtml(payload.name);
   const serviceLabel = escapeHtml(formatServiceLabel(payload.service));
+  const messageCard = buildMessageCard(payload.message);
+  const textMessageBlock = payload.message.trim()
+    ? `Message: ${payload.message}\n`
+    : "";
 
   return {
     text: `Hi ${payload.name},
 
-Thanks for reaching out to DOV Drone.
+We’ve received your enquiry and will get back to you within 1 business day.
 
-We've received your request and will respond within 1 business day with next steps and a tailored plan.
+Requested service:
+${formatServiceLabel(payload.service)}
 
-Your submitted details:
+Your details:
 Name: ${payload.name}
 Email: ${payload.email}
 Phone: ${payload.phone}
-Service: ${formatServiceLabel(payload.service)}
-Message: ${payload.message}
+${textMessageBlock}
+If your request is urgent, call, email, or message us on WhatsApp below.
 
 Contact:
 Email: ${BUSINESS_EMAIL}
-Phone / WhatsApp: ${BUSINESS_PHONE_DISPLAY}
+Phone: ${BUSINESS_PHONE_DISPLAY}
+WhatsApp: ${BUSINESS_PHONE_DISPLAY}
 
 DOV Drone
 ${siteUrl}`,
     html: buildEmailShell(`
       ${buildBrandHeader({
-        title: "Thanks for your request",
+        title: "We received your enquiry",
       })}
 
-      <div style="padding:6px;">
-        <p style="margin:0 0 8px;font-size:14px;line-height:1.55;color:#334155;">
+      <div style="padding:12px;">
+        <p style="margin:0 0 10px;font-size:14px;line-height:1.6;color:#334155;">
           Hi ${safeName},
         </p>
 
-        <p style="margin:0 0 8px;font-size:14px;line-height:1.65;color:#475569;">
-          We’ve received your request and will respond within
-          <strong style="color:#0f172a;">1 business day</strong>
-          with next steps and a tailored plan.
+        <p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#475569;">
+          We’ve received your enquiry and will get back to you within
+          <strong style="color:#0f172a;">1 business day</strong>.
         </p>
 
-        <div style="margin-top:6px;padding:6px;background:#f8fbff;border:1px solid #dbeafe;border-radius:7px;">
+        <div style="margin-top:0;padding:10px;background:#f8fbff;border:1px solid #dbeafe;border-radius:8px;">
           ${buildSectionLabel("Requested service")}
-          <div style="margin-top:3px;font-size:15px;line-height:1.35;color:#0f172a;font-weight:700;">
+          <div style="margin-top:3px;font-size:16px;line-height:1.35;color:#0f172a;font-weight:700;">
             ${serviceLabel}
           </div>
         </div>
 
-        <div style="margin-top:8px;">
-          ${buildSectionLabel("Your submitted details")}
-
-          <div style="padding:6px;background:#ffffff;border:1px solid #e2e8f0;border-radius:7px;">
+        <div style="margin-top:10px;">
+          ${buildSectionLabel("Your details")}
+          <div style="padding:10px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;">
             ${buildInfoTable(payload)}
-            ${buildMessageCard(payload.message)}
+            ${messageCard}
           </div>
         </div>
 
-        <p style="margin:8px 0 0;font-size:13px;line-height:1.6;color:#475569;">
-          If your enquiry is urgent, you can contact us directly below.
-        </p>
+        <div style="margin-top:10px;">
+          ${buildSectionLabel("Next step")}
+          <p style="margin:0;font-size:14px;line-height:1.65;color:#475569;">
+            If your request is urgent, call, email, or message us on WhatsApp below.
+          </p>
+        </div>
 
         ${buildContactCard()}
 
-        <div style="margin-top:6px;">
+        <div style="margin-top:12px;">
           <a
             href="${siteUrl}"
-            style="display:inline-block;padding:8px 11px;border-radius:7px;background:linear-gradient(135deg,#38bdf8 0%,#4f46e5 100%);color:#ffffff;text-decoration:none;font-size:12px;font-weight:700;"
+            style="display:inline-block;padding:10px 14px;border-radius:8px;background:linear-gradient(135deg,#38bdf8 0%,#4f46e5 100%);color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;"
           >
             Visit DOV Drone
           </a>
@@ -362,7 +387,10 @@ export async function POST(request: Request) {
 
     if (missing.length > 0) {
       return NextResponse.json(
-        { success: false, error: `Missing required fields: ${missing.join(", ")}` },
+        {
+          success: false,
+          error: `Missing required fields: ${missing.join(", ")}`,
+        },
         { status: 400 }
       );
     }
@@ -389,9 +417,9 @@ export async function POST(request: Request) {
     const baseMailOptions = getBaseMailOptions();
 
     const adminContent = buildAdminEmail(contactPayload);
-    const adminSubject = `New ${formatServiceLabel(contactPayload.service)} enquiry from ${
-      contactPayload.name || "website form"
-    }`;
+    const adminSubject = `New enquiry: ${formatServiceLabel(
+      contactPayload.service
+    )} – ${contactPayload.name || "Website form"}`;
 
     const adminMail: SendMailOptions = {
       ...baseMailOptions,
@@ -410,17 +438,24 @@ export async function POST(request: Request) {
       const autoReplyMail: SendMailOptions = {
         ...baseMailOptions,
         to: contactPayload.email,
-        subject: "Thanks for your request — DOV Drone",
+        subject: "We received your enquiry – DOV Drone",
         text: autoReply.text,
         html: autoReply.html,
       };
 
       await transporter.sendMail(autoReplyMail);
     } catch (autoReplyError) {
-      console.error("Auto-reply exception:", autoReplyError);
+      console.error(
+        "Auto-reply exception for:",
+        contactPayload.email,
+        autoReplyError
+      );
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({
+      success: true,
+      message: "Your enquiry has been sent successfully.",
+    });
   } catch (error) {
     console.error("POST /api/contact fatal error:", error);
 
