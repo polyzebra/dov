@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 type ContentSplitProps = {
@@ -49,22 +50,13 @@ export default function ContentSplit({
               </p>
             </div>
             {points?.length ? (
-              <ul className="grid gap-3 text-sm text-slate-600">
+              <ul className="space-y-3 text-sm text-slate-600">
                 {points.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-sky-100 text-sky-600">
-                      <svg
-                        aria-hidden="true"
-                        className="h-4 w-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
-                      </svg>
+                  <li key={point} className="flex items-center gap-4">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
+                      <CheckCircleIcon className="h-6 w-6" strokeWidth={1.5} />
                     </span>
-                    <span>{point}</span>
+                    <span className="leading-normal">{point}</span>
                   </li>
                 ))}
               </ul>

@@ -1,11 +1,11 @@
 import {
-  Buildings,
-  Calendar,
-  Hammer,
-  MapPin,
-  Crosshair,
-  VideoCamera,
-} from "@phosphor-icons/react/ssr";
+  BuildingOffice2Icon,
+  CalendarDaysIcon,
+  ChartBarIcon,
+  HomeModernIcon,
+  MapPinIcon,
+  VideoCameraIcon,
+} from "@heroicons/react/24/outline";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import CTASection from "@/components/sections/CTASection";
@@ -17,42 +17,42 @@ const services = [
   {
     title: "Real Estate",
     description: "High-end aerial visuals tailored for property marketing and sales launches.",
-  icon: Buildings,
+  icon: BuildingOffice2Icon,
     tag: "Popular",
     linkLabel: "Explore packages",
   },
   {
     title: "Inspections",
     description: "Roof, infrastructure, and asset inspections with precise documentation.",
-  icon: Crosshair,
+  icon: HomeModernIcon,
     tag: "Precision",
     linkLabel: "View capabilities",
   },
   {
     title: "Aerial Video",
     description: "Cinematic captures for brands, hospitality, and tourism campaigns.",
-  icon: VideoCamera,
+  icon: VideoCameraIcon,
     tag: "Cinematic",
     linkLabel: "See examples",
   },
   {
     title: "Construction Progress",
     description: "Consistent site updates with repeatable flight paths and reporting.",
-  icon: Hammer,
+  icon: ChartBarIcon,
     tag: "Progress",
     linkLabel: "Plan coverage",
   },
   {
     title: "Events & Activations",
     description: "Dynamic aerial coverage for launches, festivals, and live moments.",
-  icon: Calendar,
+  icon: CalendarDaysIcon,
     tag: "Live",
     linkLabel: "Book coverage",
   },
   {
     title: "Tourism Marketing",
     description: "Showcase destinations and venues with expansive aerial storytelling.",
-  icon: MapPin,
+  icon: MapPinIcon,
     tag: "Ireland",
     linkLabel: "Get a concept",
   },
@@ -61,9 +61,9 @@ const services = [
 const serviceSplits = [
   {
     eyebrow: "Real Estate",
-    title: "Sell faster with cinematic property launches",
+    title: "Real Estate Drone Photography & Video in Ireland",
     subtitle:
-      "We create elevated property films and photo sets that highlight scale, setting, and access—perfect for luxury listings and commercial portfolios.",
+      "Real Estate Drone Photography for Faster Property Sales. Cinematic aerial photography and video that elevate property listings, highlight key features, and capture buyer attention across Ireland.",
     points: [
       "Interior-to-exterior transitions and neighbourhood context",
       "Edited highlight reels ready for social and portals",
@@ -75,9 +75,9 @@ const serviceSplits = [
   },
   {
     eyebrow: "Inspections",
-    title: "Inspect assets safely with detailed aerial surveys",
+    title: "Drone Inspections for Buildings, Roofs & Infrastructure",
     subtitle:
-      "Our inspection workflows reduce downtime by capturing high-resolution footage and imagery without scaffolding or access disruptions.",
+      "Capture high-resolution aerial imagery without downtime, scaffolding, or risk. Built for faster, safer, and more efficient inspections across buildings, roofs, and infrastructure.",
     points: [
       "Roof, solar, and facade assessments",
       "Annotated footage for engineering teams",
@@ -89,17 +89,17 @@ const serviceSplits = [
   },
   {
     eyebrow: "Aerial Storytelling",
-    title: "Create standout brand visuals for campaigns",
+    title: "Create cinematic aerial content that elevates your brand and campaigns",
     subtitle:
-      "From hospitality to tourism boards, we craft aerial narratives that feel premium, modern, and tailored to your audience.",
+      "From hospitality to tourism, we produce cinematic aerial content that helps your brand stand out, attract attention, and convert more customers.",
     points: [
-      "Cinematic framing and motion planning",
-      "Creative direction aligned to your brand tone",
-      "Multiple aspect ratios for social and web",
+      "Cinematic framing & motion planning",
+      "Brand-aligned creative direction",
+      "Web & social optimized formats",
     ],
     badge: "Creative",
     highlightTitle: "Launch-ready highlight reels",
-    highlightSubtitle: "Delivered with music licensing and clean edits.",
+    highlightSubtitle: "Clean edits, ready for web and social.",
   },
 ];
 
@@ -110,8 +110,8 @@ export default function ServicesPage() {
       <main className="flex-1">
         <PageHero
           eyebrow="Services"
-          title="Drone services built for modern Irish businesses"
-          subtitle="From property marketing to technical inspections, DOV Drone delivers reliable aerial visuals with a premium finish and fast turnaround."
+          title="Professional Drone Services in Ireland for Businesses"
+          subtitle="From aerial photography to drone inspections, we deliver high-quality, reliable drone services with fast turnaround for businesses across Ireland."
           primaryAction={{ label: "Request a Quote", href: "/contact" }}
           secondaryAction={{
             label: "View Portfolio",
@@ -121,8 +121,8 @@ export default function ServicesPage() {
         />
         <FeatureGrid
           eyebrow="What we deliver"
-          title="Specialist drone services with measurable impact"
-          subtitle="Choose a focused service, or combine packages for a full aerial content plan."
+          title="Drone Solutions for Property, Construction & Infrastructure"
+          subtitle="Aerial photography, video production, and drone inspections to help you showcase, monitor, and manage projects across Ireland."
           items={services}
         />
         {serviceSplits.map((section, index) => (
@@ -140,8 +140,8 @@ export default function ServicesPage() {
         ))}
         <CTASection
           eyebrow="Plan your shoot"
-          title="Ready for a tailored aerial brief?"
-          subtitle="Share your timeline and objectives, and we&apos;ll respond with a clear plan, pricing, and flight schedule."
+          title="Let’s plan your aerial project"
+          subtitle="Tell us what you need and when - we’ll get back with a plan and price."
           primaryAction={{ label: "Start a Project", href: "/contact" }}
           secondaryAction={{ label: "See Past Work", href: "/portfolio", variant: "secondary" }}
         />

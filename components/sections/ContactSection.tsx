@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import Button from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
 
@@ -15,7 +16,7 @@ export default function ContactSection({
   id = "contact",
   eyebrow = "Contact",
   title = "Request a quote today",
-  subtitle = "We provide drone services across Ireland including Dublin, Cork, Limerick and Galway. Contact us today for a free quote.",
+  subtitle = "Tell us about your project and get a free quote. We deliver reliable, high-quality drone services across Ireland.",
 }: ContactSectionProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -212,17 +213,29 @@ export default function ContactSection({
                 DOV Drone
               </p>
               <h3 className="text-2xl font-semibold text-slate-900">
-                Premium aerial visuals for ambitious brands.
+                Professional drone services for businesses across Ireland
               </h3>
               <p className="text-sm leading-6 text-slate-600">
                 From property marketing to infrastructure inspections, our certified pilots
-                deliver steady, high-resolution footage with a clean, modern finish.
+                deliver stable, high-resolution results focused on precision and reliability.
               </p>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                {["Fully licensed & insured", "Nationwide coverage", "Fast turnaround times"].map(
+                  (item) => (
+                    <li key={item} className="flex items-center gap-4">
+                      <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
+                        <CheckCircleIcon className="h-6 w-6" strokeWidth={1.5} />
+                      </span>
+                      <span className="leading-normal">{item}</span>
+                    </li>
+                  )
+                )}
+              </ul>
             </div>
 
             <div className="mt-10 rounded-2xl border border-white/70 bg-white/85 p-4 text-xs text-slate-500 shadow-[0_18px_30px_-24px_rgba(15,23,42,0.4)] sm:p-5">
               <p className="font-semibold text-slate-900">Availability</p>
-              <p className="mt-1">Dublin · Cork · Galway · Nationwide</p>
+              <p className="mt-1">Nationwide coverage across Ireland</p>
             </div>
           </div>
         </div>

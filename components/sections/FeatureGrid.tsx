@@ -1,13 +1,12 @@
-import type { ComponentType } from "react";
-import type { IconProps } from "@phosphor-icons/react";
+import type { ComponentType, SVGProps } from "react";
 import SectionTitle from "@/components/ui/SectionTitle";
 
-type PhosphorIcon = ComponentType<IconProps>;
+type HeroIcon = ComponentType<SVGProps<SVGSVGElement>>;
 
 type FeatureItem = {
   title: string;
   description: string;
-  icon: PhosphorIcon;
+  icon: HeroIcon;
   tag?: string;
   linkLabel?: string;
 };
@@ -41,8 +40,8 @@ export default function FeatureGrid({
                 key={item.title}
                 className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.45)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_80px_-35px_rgba(14,116,144,0.65)] sm:p-8"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-sky-100 to-indigo-100 text-sky-600 transition-colors group-hover:from-sky-200 group-hover:to-indigo-200">
-                  <Icon size={24} className="h-6 w-6" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200 transition-colors">
+                  <Icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
                 {item.tag ? (
                   <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-sky-500">

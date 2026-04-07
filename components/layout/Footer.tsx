@@ -39,8 +39,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="max-w-sm text-sm leading-6 text-slate-600">
-            Premium drone services across Ireland, delivering modern aerial visuals with
-            precision and reliability.
+            Drone services across Ireland, delivering clean, reliable aerial visuals.
           </p>
         </div>
           <div className="flex flex-col gap-8 text-sm text-slate-600 sm:flex-row">
@@ -51,7 +50,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="relative inline-flex w-fit text-slate-600 transition-all duration-200 ease-out hover:text-sky-600 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                    className="relative inline-flex w-fit text-slate-600 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
                   >
                     {link.label}
                   </Link>
@@ -66,7 +65,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="relative inline-flex w-fit text-slate-600 transition-all duration-200 ease-out hover:text-sky-600 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                      className="relative inline-flex w-fit text-slate-600 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
                     >
                       {link.label}
                     </Link>
@@ -81,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#contact"
-                  className="relative inline-flex w-fit text-slate-600 transition-all duration-200 ease-out hover:text-sky-600 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-600/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                  className="relative inline-flex w-fit text-slate-600 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
                 >
                   Get a Quote
                 </Link>

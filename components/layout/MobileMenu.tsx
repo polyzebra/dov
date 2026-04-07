@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Briefcase,
-  Compass,
-  Layers3,
-  Mail,
-  MessageCircleQuestion,
-  X,
-} from "lucide-react";
+  BriefcaseIcon,
+  EnvelopeIcon,
+  InformationCircleIcon,
+  QuestionMarkCircleIcon,
+  Squares2X2Icon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import Button from "@/components/ui/Button";
 
 interface MobileMenuProps {
@@ -19,11 +19,11 @@ interface MobileMenuProps {
 }
 
 const mainNavigation = [
-  { label: "Services", href: "/services", icon: Layers3 },
-  { label: "Portfolio", href: "/portfolio", icon: Briefcase },
-  { label: "About", href: "/about", icon: Compass },
-  { label: "FAQ", href: "/faq", icon: MessageCircleQuestion },
-  { label: "Contact", href: "/contact", icon: Mail },
+  { label: "Services", href: "/services", icon: Squares2X2Icon },
+  { label: "Portfolio", href: "/portfolio", icon: BriefcaseIcon },
+  { label: "Contact", href: "/contact", icon: EnvelopeIcon },
+  { label: "About", href: "/about", icon: InformationCircleIcon },
+  { label: "FAQ", href: "/faq", icon: QuestionMarkCircleIcon },
 ];
 
 export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
@@ -57,7 +57,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
               onClick={onClose}
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-500 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-700"
             >
-              <X className="h-5 w-5" strokeWidth={1.5} />
+              <XMarkIcon className="h-5 w-5" strokeWidth={1.8} />
             </button>
           </div>
 
@@ -73,16 +73,19 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
                   onClick={onClose}
                   className={`flex min-h-13 items-center gap-4 rounded-xl px-4 text-[17px] font-medium text-slate-900 transition-colors duration-200 hover:bg-slate-50 ${
                     pathname === item.href
-                      ? "bg-slate-50 text-sky-600"
+                      ? "bg-slate-50 text-sky-500"
                       : ""
                   }`}
                 >
-                  <Icon
-                    className={`h-6 w-6 ${
-                      pathname === item.href ? "text-sky-500" : "text-slate-400"
+                  <span
+                    className={`flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-sky-200 transition-colors duration-200 ${
+                      pathname === item.href
+                        ? "bg-sky-100 text-sky-600"
+                        : "bg-sky-100 text-sky-600"
                     }`}
-                    strokeWidth={1.5}
-                  />
+                  >
+                    <Icon className="h-6 w-6" strokeWidth={1.5} />
+                  </span>
                   <span>{item.label}</span>
                 </Link>
               );
