@@ -123,7 +123,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(true)}
               className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-900"
             >
-              <Bars3Icon className="h-6 w-6" strokeWidth={1.5} />
+              <Bars3Icon className="h-9 w-9" strokeWidth={1.5} />
             </button>
           </div>
         </div>

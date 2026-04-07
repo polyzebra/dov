@@ -64,7 +64,7 @@ const getSafePayload = (payload: Partial<ContactPayload>): ContactPayload => ({
 
 const buildEmailShell = (content: string) => `
   <div style="margin:0;padding:6px;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;">
-    <div style="width:100%;max-width:720px;margin:0 auto;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;">
+    <div style="width:100%;max-width:720px;margin:0 auto;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;">
       ${content}
     </div>
   </div>
@@ -79,36 +79,36 @@ const buildBrandHeader = ({
   subtitle?: string;
   showLogo?: boolean;
 }) => `
-  <div style="padding:10px 12px;background:#fcfdff;border-bottom:1px solid #e2e8f0;">
+  <div style="padding:14px 12px;background:#f8fbff;border-bottom:1px solid #e2e8f0;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
       <tr>
         ${
           showLogo
             ? `
-        <td style="width:46px;vertical-align:top;padding:0 8px 0 0;">
+        <td style="width:90px;vertical-align:middle;padding:0 14px 0 0;">
           <img
             src="${getLogoUrl()}"
             alt="DOV Drone"
-            width="36"
-            height="36"
-            style="display:block;width:36px;height:36px;object-fit:contain;border:0;"
+            width="70"
+            height="70"
+            style="display:block;width:70px;height:70px;object-fit:contain;border:0;"
           />
         </td>
         `
             : ""
         }
-        <td style="vertical-align:top;">
-          <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:3px;">
+        <td style="vertical-align:middle;">
+          <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:6px;">
             DOV Drone
           </div>
 
-          <h1 style="margin:0;font-size:22px;line-height:1.2;letter-spacing:-0.03em;color:#0f172a;font-weight:700;">
+          <h1 style="margin:0;font-size:24px;line-height:1.2;letter-spacing:-0.02em;color:#0f172a;font-weight:700;">
             ${title}
           </h1>
 
           ${
             subtitle
-              ? `<p style="margin:5px 0 0;font-size:13px;line-height:1.55;color:#475569;">
+              ? `<p style="margin:6px 0 0;font-size:14px;line-height:1.6;color:#475569;">
                    ${subtitle}
                  </p>`
               : ""
@@ -120,7 +120,7 @@ const buildBrandHeader = ({
 `;
 
 const buildSectionLabel = (label: string) => `
-  <div style="margin:0 0 5px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#334155;">
+  <div style="margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#334155;">
     ${label}
   </div>
 `;
@@ -133,18 +133,18 @@ const buildInfoTable = (payload: ContactPayload) => {
   return `
     <table style="width:100%;border-collapse:collapse;font-size:14px;">
       <tr>
-        <td style="padding:8px 0;width:88px;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Name</td>
-        <td style="padding:8px 0;color:#475569;border-bottom:1px solid #e2e8f0;">${name}</td>
+        <td style="padding:10px 0;width:96px;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Name</td>
+        <td style="padding:10px 0;color:#475569;border-bottom:1px solid #e2e8f0;">${name}</td>
       </tr>
       <tr>
-        <td style="padding:8px 0;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Email</td>
-        <td style="padding:8px 0;color:#475569;border-bottom:1px solid #e2e8f0;">
+        <td style="padding:10px 0;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;vertical-align:top;">Email</td>
+        <td style="padding:10px 0;color:#475569;border-bottom:1px solid #e2e8f0;">
           <a href="mailto:${email}" style="color:#2563eb;text-decoration:none;">${email}</a>
         </td>
       </tr>
       <tr>
-        <td style="padding:8px 0;font-weight:700;color:#0f172a;vertical-align:top;">Phone</td>
-        <td style="padding:8px 0;color:#475569;">
+        <td style="padding:10px 0;font-weight:700;color:#0f172a;vertical-align:top;">Phone</td>
+        <td style="padding:10px 0;color:#475569;">
           <a href="tel:${escapeHtml(payload.phone)}" style="color:#2563eb;text-decoration:none;">${phone}</a>
         </td>
       </tr>
@@ -158,9 +158,9 @@ const buildMessageCard = (message: string) => {
   if (!safeMessage) return "";
 
   return `
-    <div style="margin-top:8px;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+    <div style="margin-top:10px;padding:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;">
       ${buildSectionLabel("Message")}
-      <div style="margin:0;font-size:14px;line-height:1.65;color:#475569;">
+      <div style="margin:0;font-size:14px;line-height:1.7;color:#475569;">
         ${escapeHtml(safeMessage).replace(/\n/g, "<br />")}
       </div>
     </div>
@@ -168,9 +168,9 @@ const buildMessageCard = (message: string) => {
 };
 
 const buildContactCard = () => `
-  <div style="margin-top:10px;padding:10px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;">
+  <div style="margin-top:12px;padding:14px;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;">
     ${buildSectionLabel("Contact")}
-    <div style="font-size:14px;line-height:1.8;color:#475569;">
+    <div style="font-size:14px;line-height:1.85;color:#475569;">
       <div>
         Email:
         <a href="mailto:${BUSINESS_EMAIL}" style="color:#2563eb;text-decoration:none;">${BUSINESS_EMAIL}</a>
@@ -191,9 +191,9 @@ const buildFooter = () => {
   const siteUrl = getSiteUrl();
 
   return `
-    <div style="padding:10px 12px;border-top:1px solid #e2e8f0;background:#fafcff;">
+    <div style="padding:14px 12px;border-top:1px solid #e2e8f0;background:#fafcff;">
       <div style="font-size:13px;font-weight:700;color:#0f172a;">DOV Drone</div>
-      <div style="margin-top:5px;font-size:12px;line-height:1.6;color:#64748b;">
+      <div style="margin-top:6px;font-size:12px;line-height:1.7;color:#64748b;">
         Aerial visuals, inspections, and drone media<br />
         <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">${siteUrl}</a><br />
         <a href="mailto:${BUSINESS_EMAIL}" style="color:#2563eb;text-decoration:none;">${BUSINESS_EMAIL}</a><br />
@@ -232,16 +232,16 @@ Sent via ${siteUrl}`,
       })}
 
       <div style="padding:12px;">
-        <div style="margin-top:0;padding:10px;background:#f8fbff;border:1px solid #dbeafe;border-radius:8px;">
+        <div style="margin-top:0;padding:14px;background:#f8fbff;border:1px solid #dbeafe;border-radius:10px;">
           ${buildSectionLabel("Requested service")}
-          <div style="margin-top:3px;font-size:16px;line-height:1.35;color:#0f172a;font-weight:700;">
+          <div style="margin-top:4px;font-size:18px;line-height:1.35;color:#0f172a;font-weight:700;">
             ${escapeHtml(formatServiceLabel(payload.service))}
           </div>
         </div>
 
-        <div style="margin-top:10px;">
+        <div style="margin-top:12px;">
           ${buildSectionLabel("Customer details")}
-          <div style="padding:10px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;">
+          <div style="padding:14px;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;">
             ${buildInfoTable(payload)}
             ${messageCard}
           </div>
@@ -250,7 +250,7 @@ Sent via ${siteUrl}`,
         ${buildContactCard()}
       </div>
 
-      <div style="padding:10px 12px;border-top:1px solid #e2e8f0;background:#fafcff;font-size:12px;color:#64748b;">
+      <div style="padding:12px;border-top:1px solid #e2e8f0;background:#fafcff;font-size:12px;color:#64748b;">
         Sent via
         <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">DOV Drone website</a>
       </div>
@@ -295,43 +295,43 @@ ${siteUrl}`,
       })}
 
       <div style="padding:12px;">
-        <p style="margin:0 0 10px;font-size:14px;line-height:1.6;color:#334155;">
+        <p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#334155;">
           Hi ${safeName},
         </p>
 
-        <p style="margin:0 0 12px;font-size:14px;line-height:1.7;color:#475569;">
+        <p style="margin:0 0 14px;font-size:14px;line-height:1.8;color:#475569;">
           We’ve received your enquiry and will get back to you within
           <strong style="color:#0f172a;">1 business day</strong>.
         </p>
 
-        <div style="margin-top:0;padding:10px;background:#f8fbff;border:1px solid #dbeafe;border-radius:8px;">
+        <div style="margin-top:0;padding:14px;background:#f8fbff;border:1px solid #dbeafe;border-radius:10px;">
           ${buildSectionLabel("Requested service")}
-          <div style="margin-top:3px;font-size:16px;line-height:1.35;color:#0f172a;font-weight:700;">
+          <div style="margin-top:4px;font-size:18px;line-height:1.35;color:#0f172a;font-weight:700;">
             ${serviceLabel}
           </div>
         </div>
 
-        <div style="margin-top:10px;">
+        <div style="margin-top:12px;">
           ${buildSectionLabel("Your details")}
-          <div style="padding:10px;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;">
+          <div style="padding:14px;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;">
             ${buildInfoTable(payload)}
             ${messageCard}
           </div>
         </div>
 
-        <div style="margin-top:10px;">
+        <div style="margin-top:12px;">
           ${buildSectionLabel("Next step")}
-          <p style="margin:0;font-size:14px;line-height:1.65;color:#475569;">
+          <p style="margin:0;font-size:14px;line-height:1.75;color:#475569;">
             If your request is urgent, call, email, or message us on WhatsApp below.
           </p>
         </div>
 
         ${buildContactCard()}
 
-        <div style="margin-top:12px;">
+        <div style="margin-top:14px;">
           <a
             href="${siteUrl}"
-            style="display:inline-block;padding:10px 14px;border-radius:8px;background:linear-gradient(135deg,#38bdf8 0%,#4f46e5 100%);color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;"
+            style="display:inline-block;padding:11px 16px;border-radius:10px;background:linear-gradient(135deg,#38bdf8 0%,#4f46e5 100%);color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;"
           >
             Visit DOV Drone
           </a>

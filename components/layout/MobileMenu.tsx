@@ -57,7 +57,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
               onClick={onClose}
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-500 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-700"
             >
-              <XMarkIcon className="h-5 w-5" strokeWidth={1.8} />
+              <XMarkIcon className="h-9 w-9" strokeWidth={1.8} />
             </button>
           </div>
 
