@@ -30,6 +30,7 @@ type ButtonAsLink = ButtonBaseProps & {
   href: string;
   target?: string;
   rel?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 type ButtonAsButton = ButtonBaseProps &
@@ -52,9 +53,9 @@ export default function Button({
   const classes = getClasses(variant, size, className);
 
   if ("href" in props && props.href) {
-    const { href, rel, target } = props;
+    const { href, rel, target, onClick } = props;
     return (
-      <Link href={href} className={classes} rel={rel} target={target}>
+      <Link href={href} className={classes} rel={rel} target={target} onClick={onClick}>
         {children}
       </Link>
     );

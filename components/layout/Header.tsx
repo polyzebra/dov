@@ -11,9 +11,9 @@ import MobileMenu from "@/components/layout/MobileMenu";
 const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -52,7 +52,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5">
+  <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4">
           {/* LOGO */}
           <Link
             href="/"
@@ -73,20 +73,20 @@ export default function Header() {
               <span className="text-xl font-semibold tracking-tight">DOV</span>
 
               {/* MOBILE */}
-              <span className="mt-0.6 flex flex-col text-[0.65rem] font-medium uppercase tracking-[0.28em] text-slate-500 md:hidden">
+              <span className="mt-0.6 flex flex-col text-[0.70rem] font-medium uppercase tracking-[0.30em] text-slate-500 md:hidden">
                 <span>Drone</span>
                 <span>Services</span>
               </span>
 
               {/* DESKTOP */}
-              <span className="mt-1 hidden text-[0.65rem] font-medium uppercase tracking-[0.35em] text-slate-500 md:block">
+              <span className="mt-1 hidden text-[0.70rem] font-medium uppercase tracking-[0.25em] text-slate-500 md:block">
                 Drone Services
               </span>
             </span>
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
             {navLinks.map((link) => {
               const isContact = link.label === "Contact";
               return (

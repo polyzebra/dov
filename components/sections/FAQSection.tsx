@@ -33,7 +33,7 @@ export default function FAQSection({
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition group-open:border-sky-200 group-open:text-sky-600">
                   <svg
                     aria-hidden="true"
-                    className="h-4 w-4 transition-transform duration-300 group-open:rotate-45"
+                    className="h-5 w-5 transition-transform duration-300 group-open:rotate-45"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

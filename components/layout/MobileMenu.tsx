@@ -48,7 +48,6 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
               <span className="relative flex h-10 w-10 items-center justify-center">
                 <Image src="/logo.svg" alt="DOV Drone" fill className="object-contain" />
               </span>
-              <span className="text-lg font-semibold tracking-tight">DOV</span>
             </Link>
 
             <button
@@ -84,7 +83,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
                         : "bg-sky-100 text-sky-600"
                     }`}
                   >
-                    <Icon className="h-6 w-6" strokeWidth={1.5} />
+                    <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span>{item.label}</span>
                 </Link>
@@ -95,7 +94,11 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
           <div className="mt-auto pt-6">
             <div className="h-px w-full bg-slate-100" />
             <div className="pt-6">
-              <Button href="/contact" className="w-full justify-center rounded-2xl">
+              <Button
+                href="/contact"
+                onClick={onClose}
+                className="w-full justify-center rounded-2xl"
+              >
                 Get a Quote
               </Button>
             </div>

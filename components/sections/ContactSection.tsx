@@ -81,7 +81,7 @@ export default function ContactSection({
   };
 
   return (
-    <section id={id} className="animate-fade-in bg-slate-50/70 py-20 sm:py-28">
+  <section id={id} className="animate-fade-in bg-slate-50/70 pt-20 pb-12 sm:py-28">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
 
@@ -145,7 +145,7 @@ export default function ContactSection({
                   <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
                     <svg
                       aria-hidden="true"
-                      className="h-4 w-4"
+                      className="h-5 w-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -224,7 +224,7 @@ export default function ContactSection({
                   (item) => (
                     <li key={item} className="flex items-center gap-4">
                       <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
-                        <CheckCircleIcon className="h-6 w-6" strokeWidth={1.5} />
+                        <CheckCircleIcon className="h-7 w-7" strokeWidth={1.5} />
                       </span>
                       <span className="leading-normal">{item}</span>
                     </li>

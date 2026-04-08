@@ -25,7 +25,7 @@ export default function About() {
             {highlights.map((item) => (
               <li key={item} className="flex items-center gap-4 text-sm text-slate-600">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
-                  <CheckCircleIcon className="h-6 w-6" strokeWidth={1.5} />
+                  <CheckCircleIcon className="h-7 w-7" strokeWidth={1.5} />
                 </span>
                 <span className="leading-normal">{item}</span>
               </li>

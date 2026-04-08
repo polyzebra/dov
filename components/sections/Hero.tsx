@@ -55,25 +55,25 @@ export default function Hero() {
               <div className="mt-5 grid gap-4">
                 <div className="group/item flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-normal text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200 transition-colors duration-200">
-                    <ShieldCheckIcon className="h-6 w-6" strokeWidth={1.5} />
+                    <ShieldCheckIcon className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span>Fully Licensed & Insured</span>
                 </div>
                 <div className="group/item flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-normal text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200 transition-colors duration-200">
-                    <VideoCameraIcon className="h-6 w-6" strokeWidth={1.5} />
+                    <VideoCameraIcon className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span>4K Professional Footage</span>
                 </div>
                 <div className="group/item flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-normal text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200 transition-colors duration-200">
-                    <ClockIcon className="h-6 w-6" strokeWidth={1.5} />
+                    <ClockIcon className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span>24–48h Turnaround</span>
                 </div>
                 <div className="group/item flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-normal text-slate-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200 transition-colors duration-200">
-                    <GlobeAltIcon className="h-6 w-6" strokeWidth={1.5} />
+                    <GlobeAltIcon className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span>Nationwide Coverage</span>
                 </div>

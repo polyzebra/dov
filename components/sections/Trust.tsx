@@ -31,7 +31,7 @@ export default function Trust() {
                 className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-600 shadow-[0_18px_36px_-32px_rgba(15,23,42,0.5)] sm:p-5"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
-                  <Icon className="h-6 w-6" strokeWidth={1.5} />
+                  <Icon className="h-7 w-7" strokeWidth={1.5} />
                 </span>
                 <div>
                   <p className="text-base font-semibold text-slate-900">{item.label}</p>
