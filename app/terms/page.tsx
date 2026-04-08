@@ -4,7 +4,7 @@ import PageHero from "@/components/sections/PageHero";
 
 export default function TermsPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-white text-slate-900">
+  <div className="flex min-h-screen flex-col text-slate-900">
       <Header />
       <main className="flex-1">
         <PageHero

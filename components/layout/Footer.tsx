@@ -17,7 +17,7 @@ const policyLinks = [
 export default function Footer() {
   return (
   <footer className="bg-gray-50">
-  <div className="mx-auto grid w-full max-w-6xl gap-5 px-4 pb-11 pt-11 text-sm text-slate-600 sm:gap-8 sm:px-6 md:grid-cols-2 md:gap-10 md:py-10 lg:grid-cols-4">
+  <div className="mx-auto grid w-full max-w-6xl gap-4 px-4 pb-11 pt-8 text-sm text-slate-600 sm:gap-8 sm:px-6 sm:pt-11 md:grid-cols-2 md:gap-10 md:py-10 lg:grid-cols-4">
     <div className="space-y-1.5 sm:space-y-3">
           <Link href="/" className="flex items-center gap-2">
             <span className="relative flex h-8 w-8 items-center justify-center md:h-9 md:w-9">
@@ -42,14 +42,14 @@ export default function Footer() {
             Drone services across Ireland, delivering clean, reliable aerial visuals.
           </p>
         </div>
-        <div className="space-y-0.5 sm:space-y-2">
+        <div className="space-y-1 sm:space-y-2">
           <p className="text-sm font-semibold text-slate-900">Navigation</p>
-          <ul className="space-y-1">
+          <ul className="space-y-1.5 sm:space-y-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative inline-flex w-fit text-slate-500 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                  className="relative block w-fit py-1.5 text-slate-500 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 sm:inline-flex sm:py-0 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
                 >
                   {link.label}
                 </Link>
@@ -57,14 +57,14 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="space-y-0.5 sm:space-y-2">
+        <div className="space-y-1 sm:space-y-2">
           <p className="text-sm font-semibold text-slate-900">Policies</p>
-          <ul className="space-y-1">
+          <ul className="space-y-1.5 sm:space-y-1">
             {policyLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative inline-flex w-fit text-slate-500 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                  className="relative block w-fit py-1.5 text-slate-500 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 sm:inline-flex sm:py-0 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
                 >
                   {link.label}
                 </Link>
@@ -72,14 +72,14 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="space-y-0.5 sm:space-y-2">
+        <div className="space-y-1 sm:space-y-2">
           <p className="text-sm font-semibold text-slate-900">Contact</p>
           <ul className="space-y-1 text-slate-500">
             <li>Dundalk, Co. Louth, Ireland</li>
             <li>
               <Link
                 href="/#contact"
-                className="relative inline-flex w-fit text-slate-500 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
+                className="relative block w-fit py-1.5 text-slate-500 transition-all duration-200 ease-out hover:text-sky-500 hover:translate-x-0.5 active:opacity-80 sm:inline-flex sm:py-0 after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-sky-500/80 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100"
               >
                 Get a Quote
               </Link>
