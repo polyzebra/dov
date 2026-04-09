@@ -31,7 +31,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 ::selection {
@@ -47,7 +47,7 @@ html {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out both;
+  animation: none;
 }
 
 @keyframes float {

@@ -39,7 +39,9 @@ export default function Footer() {
             </div>
           </Link>
           <p className="max-w-sm text-sm leading-6 text-slate-500/90">
-            Drone services across Ireland, delivering clean, reliable aerial visuals.
+            Professional drone services across Ireland.
+            <br />
+            Inspections, aerial video & photography.
           </p>
         </div>
         <div className="space-y-1 sm:space-y-2">

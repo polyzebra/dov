@@ -16,7 +16,9 @@ export default function Hero() {
         <div className="space-y-10">
           <div className="space-y-6 sm:space-y-5">
             <h1 className="text-[2.5rem] leading-snug font-semibold tracking-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl xl:text-7xl">
-              Drone Services in Ireland for Inspections, Aerial Video & Photography
+              Drone Services in Ireland
+              <br />
+              Inspections, Aerial Video & Photography
             </h1>
             <p className="max-w-xl text-[1.05rem] leading-7 text-slate-600 sm:text-lg">
               Fast, reliable drone services in Ireland for inspections, aerial video, and photography. We handle planning, compliance, and editing so your project runs smoothly.
