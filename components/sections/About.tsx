@@ -13,7 +13,7 @@ export default function About() {
   <section id="about" className="bg-white py-16 animate-fade-in sm:py-20">
     <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <SectionTitle
-          eyebrow="Why DOV Drone"
+          eyebrow="Why DRONEXA"
           title="Professional Drone Services in Ireland Built on Quality and Reliability"
           subtitle="DORONEXA Drone delivers high-quality aerial services across Ireland, focused on reliability, precision, and clean visual results for businesses and property clients."
         />
