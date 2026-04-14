@@ -61,7 +61,7 @@ export default function Header() {
             <span className="relative flex h-12 w-12 items-center justify-center">
               <Image
                 src="/logo.svg"
-                alt="DOV Drone"
+                alt="DRONEXA Drone"
                 fill
                 className="object-contain"
                 priority
@@ -70,7 +70,7 @@ export default function Header() {
 
             {/* TEXT BLOCK (FIXED ALIGNMENT) */}
             <span className="flex flex-col items-start leading-none">
-              <span className="text-xl font-semibold tracking-tight">DOV</span>
+              <span className="text-xl font-semibold tracking-tight">DRONEXA</span>
 
               {/* MOBILE */}
               <span className="mt-0.6 flex flex-col text-[0.70rem] font-medium uppercase tracking-[0.30em] text-slate-500 md:hidden">

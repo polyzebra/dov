@@ -23,7 +23,7 @@ export default function Footer() {
             <span className="relative flex h-8 w-8 items-center justify-center md:h-9 md:w-9">
               <Image
                 src="/logo.svg"
-                alt="DOV Drone"
+                alt="DRONEXA Drone"
                 fill
                 className="object-contain opacity-85"
                 priority
@@ -31,7 +31,7 @@ export default function Footer() {
             </span>
             <div className="flex flex-col">
               <span className="text-sm font-semibold tracking-tight text-slate-900/85">
-                DOV
+                DRONEXA
               </span>
               <span className="mt-0.5 text-[0.70rem] font-medium uppercase tracking-[0.25em] text-slate-500">
                 Drone Services
@@ -91,7 +91,7 @@ export default function Footer() {
       </div>
   <div>
   <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 pb-3 pt-4 text-xs text-slate-500 sm:px-6 sm:py-4">
-          <span>© 2026 DOV Drone. All rights reserved.</span>
+          <span>© 2026 DRONEXA Drone. All rights reserved.</span>
         </div>
       </div>
     </footer>
