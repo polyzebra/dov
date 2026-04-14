@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DOV Drone | Professional Drone Services in Ireland",
+  title: {
+    default: "DRONEXA Drone Services Ireland",
+    template: "%s | DRONEXA",
+  },
   description:
-    "Aerial video, real estate visuals, and drone inspections with a modern, reliable approach.",
+    "Professional drone services across Ireland – aerial photography, video production, real estate visuals, and inspections. Fast, reliable, and fully licensed.",
 };
 
 export default function RootLayout({
