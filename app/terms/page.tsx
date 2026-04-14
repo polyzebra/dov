@@ -12,7 +12,7 @@ export default function TermsPage() {
           title="Terms of Service"
           subtitle="Last updated: April 4, 2026"
           align="center"
-          primaryAction={{ label: "Contact DOV Drone", href: "/contact" }}
+          primaryAction={{ label: "Contact DRONEXA", href: "/contact" }}
           secondaryAction={{ label: "Privacy Policy", href: "/privacy-policy", variant: "secondary" }}
         />
         <section className="bg-white py-20 animate-fade-in">
@@ -20,35 +20,50 @@ export default function TermsPage() {
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Engagement</h2>
               <p>
-                All projects are confirmed with a written brief, schedule, and quote. Flights
-                are subject to weather, aviation rules, and site access approvals.
+                All projects are confirmed with a written quote, scope, and schedule. Flights
+                are subject to weather conditions, aviation regulations, and site access
+                permissions.
               </p>
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Payments</h2>
               <p>
-                A booking deposit is required to secure flight dates. Remaining balances are
+                A booking deposit may be required to secure dates. The remaining balance is
                 due upon delivery unless otherwise agreed in writing.
               </p>
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Usage rights</h2>
               <p>
-                Clients receive usage rights for approved deliverables. Raw footage remains the
-                property of DOV Drone unless contracted separately.
+                Clients receive usage rights for final approved deliverables. Raw footage
+                remains the property of DRONEXA unless otherwise agreed.
               </p>
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Cancellations</h2>
               <p>
-                Weather delays are rescheduled at no extra cost. Cancellations within 48 hours
-                may incur a rescheduling fee.
+                Flights affected by weather will be rescheduled at no additional cost.
+                Cancellations within 48 hours may incur a fee.
               </p>
             </div>
             <div className="space-y-3">
-              <h2 className="text-xl font-semibold text-slate-900">Questions</h2>
+              <h2 className="text-xl font-semibold text-slate-900">Liability</h2>
               <p>
-                For contract or usage questions, contact dovdrone@gmail.com for clarification.
+                DRONEXA is not liable for delays caused by weather, restricted airspace, or
+                factors outside our control.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-xl font-semibold text-slate-900">Compliance</h2>
+              <p>
+                All operations are conducted in accordance with Irish Aviation Authority (IAA)
+                regulations.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-xl font-semibold text-slate-900">Contact</h2>
+              <p>
+                For questions, contact: dovdrone@gmail.com
               </p>
             </div>
           </div>

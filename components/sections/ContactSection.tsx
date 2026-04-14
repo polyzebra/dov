@@ -210,7 +210,7 @@ export default function ContactSection({
           <div className="flex flex-col justify-between rounded-3xl border border-sky-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-6 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.75)] sm:p-8 lg:p-9">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-500">
-                DOV Drone
+                DRONEXA DRONE
               </p>
               <h3 className="text-2xl font-semibold text-slate-900">
                 Professional drone services for businesses across Ireland

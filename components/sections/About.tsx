@@ -15,7 +15,7 @@ export default function About() {
         <SectionTitle
           eyebrow="Why DOV Drone"
           title="Professional Drone Services in Ireland Built on Quality and Reliability"
-          subtitle="DOV Drone delivers high-quality aerial services across Ireland, focused on reliability, precision, and clean visual results for businesses and property clients."
+          subtitle="DORONEXA Drone delivers high-quality aerial services across Ireland, focused on reliability, precision, and clean visual results for businesses and property clients."
         />
   <div className="rounded-3xl border border-slate-200/70 bg-slate-50/70 p-6 shadow-[0_30px_60px_-45px_rgba(15,23,42,0.7)] sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-500">

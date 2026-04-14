@@ -140,8 +140,8 @@ export default function ServicesPage() {
         ))}
         <CTASection
           eyebrow="Plan your shoot"
-          title="Let’s plan your aerial project"
-          subtitle="Tell us what you need and when - we’ll get back with a plan and price."
+          title="Plan your drone project with confidence"
+          subtitle="Tell us your location, goals, and timeline - we’ll send you a clear plan, pricing, and delivery timeframe within one business day."
           primaryAction={{ label: "Start a Project", href: "/contact" }}
           secondaryAction={{ label: "See Past Work", href: "/portfolio", variant: "secondary" }}
         />

@@ -8,27 +8,27 @@ const faqs = [
   {
     question: "How quickly can you schedule a flight?",
     answer:
-      "Most projects are booked within 5-7 days. Rush scheduling is available for time-sensitive launches and inspections.",
+  "Most drone services in Ireland can be scheduled within 5-7 days. Rush scheduling is available for urgent aerial photography, inspections, and video production projects.",
   },
   {
-    question: "Are DOV Drone pilots licensed and insured?",
+  question: "Are DRONEXA Drone pilots licensed and insured?",
     answer:
-      "Yes. Our pilots are certified for commercial operations in Ireland and every flight is fully insured.",
+  "Yes, all DRONEXA drone pilots are fully licensed and insured in Ireland. We operate in compliance with aviation regulations to ensure safe and professional drone services.",
   },
   {
-    question: "What&apos;s included in the deliverables?",
+  question: "What is included in the final delivery?",
     answer:
-      "You receive edited 4K footage, curated highlights, and still imagery formatted for web, social, and listings.",
+  "Our drone services include 4K aerial video, professional photography, editing, and color grading. Final deliverables are optimized for marketing, social media, and commercial use.",
   },
   {
     question: "Can you handle multi-location shoots?",
     answer:
-      "Absolutely. We plan multi-day routes for property portfolios, tourism campaigns, and inspection programs.",
+  "Yes, we provide nationwide drone services across Ireland, including Dublin, Cork, and Galway. We efficiently plan and execute multi-location shoots for larger projects.",
   },
   {
     question: "Do you work with marketing agencies?",
     answer:
-      "Yes. We provide white-labeled capture services and collaborate on creative direction and shot lists.",
+  "Yes, we work with marketing agencies and production teams across Ireland, delivering professional drone photography and video content tailored to campaigns.",
   },
 ];
 
@@ -39,21 +39,21 @@ export default function FAQPage() {
       <main className="flex-1">
         <PageHero
           eyebrow="FAQ"
-          title="Answers for planning your drone project"
-          subtitle="Everything you need to know about scheduling, deliverables, and compliance."
+          title="Drone Services FAQ - Everything You Need to Know"
+          subtitle="Find answers about drone services in Ireland, including pricing, scheduling, deliverables, and legal requirements."
           primaryAction={{ label: "Request a Quote", href: "/contact" }}
           secondaryAction={{ label: "See Services", href: "/services", variant: "secondary" }}
         />
         <FAQSection
           eyebrow="Questions"
-          title="Common questions from our clients"
-          subtitle="If you need a specific deliverable or compliance detail, we&apos;re happy to walk you through it."
+          title="Frequently Asked Questions"
+          subtitle="If you need specific details about drone services, pricing, or regulations in Ireland, we’re happy to help."
           items={faqs}
         />
         <CTASection
           eyebrow="Still have questions?"
-          title="We&apos;re here to help"
-          subtitle="Share your requirements and we&apos;ll send a tailored response within one business day."
+          title="Still have questions?"
+          subtitle="Get a fast quote for drone services in Ireland. Tell us about your project - we’ll reply within 24 hours with pricing, timeline, and recommendations."
           primaryAction={{ label: "Contact the Team", href: "/contact" }}
           secondaryAction={{ label: "View Portfolio", href: "/portfolio", variant: "secondary" }}
         />

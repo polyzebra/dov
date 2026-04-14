@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="relative">
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-slate-400">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-500">
                     Why choose us
                   </p>
                   <p className="mt-2 text-lg font-semibold text-slate-900 sm:text-xl">
@@ -81,7 +81,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="mt-5 rounded-2xl bg-blue-50/40 px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-500">
                   Fast delivery
                 </p>
                 <p className="mt-1 text-sm font-medium text-slate-800">

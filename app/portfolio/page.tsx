@@ -50,21 +50,21 @@ export default function PortfolioPage() {
       <main className="flex-1">
         <PageHero
           eyebrow="Portfolio"
-          title="Recent aerial projects across Ireland"
-          subtitle="A selection of highlights from our property, inspection, and brand storytelling work."
+          title="Professional Drone Services Portfolio in Ireland"
+          subtitle="Explore our recent drone projects across Ireland, including aerial photography, inspections, and commercial video production."
           primaryAction={{ label: "Plan a Shoot", href: "/contact" }}
           secondaryAction={{ label: "View Services", href: "/services", variant: "secondary" }}
         />
         <GalleryGrid
           eyebrow="Featured work"
-          title="Drone stories built for real results"
-          subtitle="Each project is shaped around business outcomes, from faster sales cycles to clearer inspections."
+          title="Drone services that deliver real results"
+          subtitle="Our drone services help businesses in Ireland achieve faster sales, better inspections, and stronger visual marketing."
           items={projects}
         />
         <CTASection
           eyebrow="Next project"
-          title="Bring your next location to life"
-          subtitle="We handle planning, flight execution, and edits so your team can launch confidently."
+          title="Ready to start your drone project in Ireland?"
+          subtitle="We provide full service drone solutions in Ireland, including aerial photography, inspections, and video production."
           primaryAction={{ label: "Get a Quote", href: "/contact" }}
           secondaryAction={{ label: "Explore Services", href: "/services", variant: "secondary" }}
         />

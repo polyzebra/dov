@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
           title="Privacy Policy"
           subtitle="Last updated: April 4, 2026"
           align="center"
-          primaryAction={{ label: "Contact DOV Drone", href: "/contact" }}
+          primaryAction={{ label: "Contact DRONEXA", href: "/contact" }}
           secondaryAction={{ label: "Terms", href: "/terms", variant: "secondary" }}
         />
         <section className="bg-white py-20 animate-fade-in">
@@ -20,39 +20,50 @@ export default function PrivacyPolicyPage() {
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Overview</h2>
               <p>
-                DOV Drone collects only the information required to plan and deliver aerial
-                services. We never sell client data and we store records securely in line with
-                Irish data protection requirements.
+                DRONEXA Drone Services respects your privacy and is committed to protecting your
+                personal data.
               </p>
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Information we collect</h2>
               <p>
-                We collect contact details, project briefs, and location information when you
-                submit a request. We also keep flight logs and operational records required for
-                compliance.
+                We collect contact details (name, email), project information, and location
+                details when you submit an inquiry. We may also store flight logs and
+                operational data required for legal compliance.
               </p>
             </div>
             <div className="space-y-3">
-              <h2 className="text-xl font-semibold text-slate-900">How we use information</h2>
+              <h2 className="text-xl font-semibold text-slate-900">How we use your information</h2>
               <p>
-                Information is used to scope projects, schedule flights, provide deliverables,
-                and communicate timelines. We may also send occasional service updates relevant
-                to your active projects.
+                We use your information to respond to inquiries, plan and deliver drone
+                services, and communicate project updates.
               </p>
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Data retention</h2>
               <p>
-                Project files are retained for up to 24 months unless you request removal
-                earlier. Flight logs are retained for compliance purposes.
+                We retain project-related information for up to 24 months unless you request
+                deletion earlier. Certain records may be kept longer where required by law.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-xl font-semibold text-slate-900">Data sharing</h2>
+              <p>
+                We do not sell or share your personal data with third parties, except where
+                required for legal or regulatory purposes.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h2 className="text-xl font-semibold text-slate-900">Your rights</h2>
+              <p>
+                You have the right to request access, correction, or deletion of your personal
+                data at any time.
               </p>
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">Contact</h2>
               <p>
-                For privacy requests, email dovdrone@gmail.com. We respond within one business
-                day.
+                For privacy-related requests, contact us at: dovdrone@gmail.com
               </p>
             </div>
           </div>

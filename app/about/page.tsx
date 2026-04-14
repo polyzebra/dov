@@ -9,17 +9,17 @@ const stats = [
   {
     label: "Projects",
     value: "300+",
-    description: "Commercial shoots completed across Ireland for property, tourism, and infrastructure teams.",
+  description: "300+ drone projects completed across Ireland including aerial photography, drone inspections, and commercial video production.",
   },
   {
     label: "Turnaround",
     value: "24-48h",
-    description: "Fast edits delivered with consistent color and cinematic polish.",
+  description: "Fast turnaround drone services with delivery in 24-48 hours, including editing, color grading, and final production.",
   },
   {
     label: "Coverage",
     value: "Nationwide",
-    description: "Dublin, Cork, Galway, and regional sites covered weekly.",
+  description: "Serving Dublin, Cork, Galway, and locations across Ireland with professional drone services for commercial and industrial projects.",
   },
 ];
 
@@ -30,34 +30,34 @@ export default function AboutPage() {
       <main className="flex-1">
         <PageHero
           eyebrow="About"
-          title="A modern Irish drone studio built for precision"
-          subtitle="DOV Drone is a boutique aerial team helping brands, property firms, and operators capture the views that move decisions."
+          title="Drone Services Company in Ireland - DRONEXA"
+          subtitle="DRONEXA is a professional drone services company in Ireland providing inspections, aerial photography, and video production for businesses and property owners. We work with construction, real estate, and commercial clients across Dublin, Cork, Galway and nationwide. Based in Dundalk, serving clients across Ireland."
           primaryAction={{ label: "Meet the Team", href: "/contact" }}
           secondaryAction={{ label: "View Services", href: "/services", variant: "secondary" }}
         />
         <ContentSplit
           eyebrow="Who we are"
-          title="Certified pilots with a creative mindset"
-          subtitle="We blend aviation-grade safety with cinematic storytelling, ensuring every flight is planned, compliant, and built to serve your goals."
+          title="Certified Drone Pilots in Ireland with a Creative Mindset"
+          subtitle="We provide certified drone services in Ireland, combining aviation-grade safety with cinematic storytelling. Every flight is carefully planned, fully compliant, and tailored to your project goals."
           points={[
             "CAA-licensed pilots and insured flights",
             "Dedicated producer for shot planning and timelines",
             "Consistent style guide for brand-forward visuals",
           ]}
-          badge="DOV Drone"
+          badge="DRONEXA DRONE"
           highlightTitle="Built for modern marketing teams"
           highlightSubtitle="We collaborate directly with marketing and project teams for seamless delivery."
         />
         <StatsSection
           eyebrow="Performance"
-          title="Trusted by ambitious Irish brands"
-          subtitle="We maintain consistent output, clear communication, and rapid delivery across every project."
+          title="Trusted Drone Services in Ireland - Aerial Photography & Video Experts"
+          subtitle="We deliver professional drone services in Ireland with consistent quality, clear communication, and fast turnaround for every project."
           stats={stats}
         />
         <CTASection
           eyebrow="Let&apos;s collaborate"
-          title="Book a discovery call with DOV Drone"
-          subtitle="We&apos;ll outline the right flight plan, creative approach, and delivery timeline for your next project."
+          title="Professional Drone Services in Ireland - DRONEXA"
+          subtitle="We provide professional drone services in Ireland including inspections, aerial photography, and video production. Get a custom plan and fast turnaround for your project."
           primaryAction={{ label: "Schedule a Call", href: "/contact" }}
           secondaryAction={{ label: "See Portfolio", href: "/portfolio", variant: "secondary" }}
         />
