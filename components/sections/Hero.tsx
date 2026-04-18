@@ -13,18 +13,18 @@ export default function Hero() {
         <div className="absolute inset-x-0 top-0 h-130 bg-linear-to-b from-sky-100 via-white to-white" />
       </div>
   <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-4 sm:gap-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="space-y-10 text-center sm:text-left">
+  <div className="space-y-10 text-left">
           <div className="space-y-6 sm:space-y-5">
             <h1 className="text-[2.5rem] leading-snug font-semibold tracking-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl xl:text-7xl">
               Drone Services in Ireland
               <br className="hidden sm:block" />
               Inspections, Aerial Video & Photography
             </h1>
-            <p className="mx-auto max-w-xl text-[1.05rem] leading-7 text-slate-600 sm:mx-0 sm:text-lg">
+            <p className="max-w-xl text-[1.05rem] leading-7 text-slate-600 sm:text-lg">
               Fast, reliable drone services in Ireland for inspections, aerial video, and photography. We handle planning, compliance, and editing so your project runs smoothly.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:justify-start">
+          <div className="flex flex-wrap justify-start gap-4">
             <Button href="/contact" size="lg" className="h-12 w-full px-10 sm:w-auto">
               Request a Quote
             </Button>
