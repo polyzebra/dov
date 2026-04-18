@@ -40,7 +40,7 @@ export default function AboutPage() {
           title="Certified Drone Pilots in Ireland with a Creative Mindset"
           subtitle="We provide certified drone services in Ireland, combining aviation-grade safety with cinematic storytelling. Every flight is carefully planned, fully compliant, and tailored to your project goals."
           points={[
-            "CAA-licensed pilots and insured flights",
+            "IAA-licensed pilots and insured flights",
             "Dedicated producer for shot planning and timelines",
             "Consistent style guide for brand-forward visuals",
           ]}

@@ -46,7 +46,13 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 text-slate-900" onClick={onClose}>
               <span className="relative flex h-10 w-10 items-center justify-center">
-                <Image src="/logo.svg" alt="DOV Drone" fill className="object-contain" />
+                <Image
+                  src="/logo.svg"
+                  alt="DOV Drone"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-contain"
+                />
               </span>
             </Link>
 

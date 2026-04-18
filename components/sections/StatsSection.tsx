@@ -27,7 +27,7 @@ export default function StatsSection({
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-5 shadow-[0_18px_36px_-32px_rgba(15,23,42,0.5)] sm:p-6"
+              className="card border border-slate-200/80 bg-slate-50/70 p-5 shadow-[0_18px_36px_-32px_rgba(15,23,42,0.5)] sm:p-6"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-500">
                 {stat.label}

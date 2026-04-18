@@ -3,6 +3,33 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
+  --radius-card: 8px;
+  --radius-button: 6px;
+  --radius-tag: 6px;
+}
+
+/* Global SaaS minimal radius */
+
+/* Cards / containers */
+[class*="rounded-3xl"],
+[class*="rounded-2xl"],
+[class*="rounded-xl"] {
+  border-radius: var(--radius-card) !important;
+}
+
+/* Images */
+img {
+  border-radius: var(--radius-card);
+}
+
+/* Buttons */
+button {
+  border-radius: var(--radius-button) !important;
+}
+
+/* Tags / badges */
+[class*="px-3"][class*="py-1"] {
+  border-radius: var(--radius-button) !important;
 }
 
 @theme inline {
@@ -36,6 +63,26 @@ html {
 
 ::selection {
   background: rgba(56, 189, 248, 0.25);
+}
+
+.card {
+  border-radius: var(--radius-card);
+}
+
+.card-image {
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.button {
+  border-radius: var(--radius-button);
+}
+
+.tag {
+  border-radius: var(--radius-tag);
+}
+
+.input {
+  border-radius: var(--radius-button);
 }
 
 .animate-float {

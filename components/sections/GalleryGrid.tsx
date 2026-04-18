@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import SectionTitle from "@/components/ui/SectionTitle";
 
 type GalleryItem = {
@@ -30,18 +32,20 @@ export default function GalleryGrid({
           {items.map((item) => (
             <div
               key={item.title}
-              className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-5 shadow-[0_24px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_80px_-38px_rgba(14,116,144,0.6)] sm:p-6"
+              className="card group relative overflow-hidden border border-slate-200/80 bg-white p-5 shadow-[0_24px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_34px_80px_-38px_rgba(14,116,144,0.6)] sm:p-6"
             >
-              <div className="relative h-36 overflow-hidden rounded-2xl">
-                <img
+              <div className="card-image relative h-36 overflow-hidden rounded-lg">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="absolute inset-0 bg-black/10" />
 
-                <div className="absolute bottom-4 left-4 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.25em] text-sky-500">
+                <div className="tag absolute bottom-4 left-4 border border-white/70 bg-white/80 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.25em] text-sky-500">
                   {item.tag ?? "Featured"}
                 </div>
               </div>
@@ -50,7 +54,7 @@ export default function GalleryGrid({
                 <h3 className="text-lg font-semibold text-slate-900">
                   {item.title}
                 </h3>
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-500">
                   {item.location}
                 </p>
                 <p className="text-sm leading-6 text-slate-600">

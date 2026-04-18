@@ -88,13 +88,13 @@ export default function ContactSection({
         <div className="mt-10 grid gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-slate-200/70 bg-white p-6 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.7)] sm:p-8 lg:p-12"
+            className="card border border-slate-200/70 bg-white p-6 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.7)] sm:p-8 lg:p-12"
           >
             <div className="grid gap-6 sm:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm font-medium text-slate-700">
                 Name
                 <input
-                  className="h-12 rounded-xl border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
+                  className="input h-12 border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
                   placeholder="Jane Murphy"
                   type="text"
                   name="name"
@@ -105,7 +105,7 @@ export default function ContactSection({
               <label className="flex flex-col gap-2 text-sm font-medium text-slate-700">
                 Email
                 <input
-                  className="h-12 rounded-xl border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
+                  className="input h-12 border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
                   placeholder="your@email.com"
                   type="email"
                   name="email"
@@ -116,7 +116,7 @@ export default function ContactSection({
               <label className="flex flex-col gap-2 text-sm font-medium text-slate-700">
                 Phone
                 <input
-                  className="h-12 rounded-xl border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
+                  className="input h-12 border border-slate-200 bg-slate-50/70 px-4 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
                   placeholder="Phone number (optional)"
                   type="tel"
                   name="phone"
@@ -127,7 +127,7 @@ export default function ContactSection({
                 Service
                 <div className="relative">
                   <select
-                    className="h-12 w-full min-w-56 max-w-full appearance-none rounded-xl border border-slate-200 bg-slate-50/70 px-4 pr-10 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
+                    className="input h-12 w-full min-w-56 max-w-full appearance-none border border-slate-200 bg-slate-50/70 px-4 pr-10 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
                     name="service"
                     defaultValue=""
                     required
@@ -161,7 +161,7 @@ export default function ContactSection({
             <label className="mt-6 flex flex-col gap-2 text-sm font-medium text-slate-700">
               Message
               <textarea
-                className="min-h-35 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
+                className="input min-h-35 border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200"
                 placeholder="Tell us what you need filmed, where it is, and when."
                 name="message"
                 required
@@ -195,19 +195,19 @@ export default function ContactSection({
             </div>
 
             {error ? (
-              <p className="mt-6 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+              <p className="card mt-6 border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
                 {error}
               </p>
             ) : null}
 
             {success ? (
-              <p className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+              <p className="card mt-6 border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
                 Thanks, your request has been sent. We&apos;ll get back to you shortly.
               </p>
             ) : null}
           </form>
 
-          <div className="flex flex-col justify-between rounded-3xl border border-sky-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-6 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.75)] sm:p-8 lg:p-9">
+          <div className="card flex flex-col justify-between border border-sky-200/70 bg-linear-to-br from-sky-50 via-white to-indigo-50 p-6 shadow-[0_35px_70px_-45px_rgba(14,116,144,0.75)] sm:p-8 lg:p-9">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-500">
                 DRONEXA DRONE
@@ -233,7 +233,7 @@ export default function ContactSection({
               </ul>
             </div>
 
-            <div className="mt-10 rounded-2xl border border-white/70 bg-white/85 p-4 text-xs text-slate-500 shadow-[0_18px_30px_-24px_rgba(15,23,42,0.4)] sm:p-5">
+            <div className="card mt-10 border border-white/70 bg-white/85 p-4 text-xs text-slate-500 shadow-[0_18px_30px_-24px_rgba(15,23,42,0.4)] sm:p-5">
               <p className="font-semibold text-slate-900">Availability</p>
               <p className="mt-1">Nationwide coverage across Ireland</p>
             </div>

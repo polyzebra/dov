@@ -88,7 +88,7 @@ const buildBrandHeader = ({
         <td style="width:90px;vertical-align:middle;padding:0 14px 0 0;">
           <img
             src="${getLogoUrl()}"
-            alt="DOV Drone"
+            alt="DRONEXA"
             width="70"
             height="70"
             style="display:block;width:70px;height:70px;object-fit:contain;border:0;"
@@ -99,7 +99,7 @@ const buildBrandHeader = ({
         }
         <td style="vertical-align:middle;">
           <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#2563eb;font-weight:700;margin-bottom:6px;">
-            DOV Drone
+            DRONEXA
           </div>
 
           <h1 style="margin:0;font-size:24px;line-height:1.2;letter-spacing:-0.02em;color:#0f172a;font-weight:700;">
@@ -192,7 +192,7 @@ const buildFooter = () => {
 
   return `
     <div style="padding:14px 12px;border-top:1px solid #e2e8f0;background:#fafcff;">
-      <div style="font-size:13px;font-weight:700;color:#0f172a;">DOV Drone</div>
+      <div style="font-size:13px;font-weight:700;color:#0f172a;">DRONEXA</div>
       <div style="margin-top:6px;font-size:12px;line-height:1.7;color:#64748b;">
         Aerial visuals, inspections, and drone media<br />
         <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">${siteUrl}</a><br />
@@ -213,7 +213,7 @@ const buildAdminEmail = (payload: ContactPayload) => {
   const messageCard = buildMessageCard(payload.message);
 
   return {
-    text: `New enquiry from the DOV Drone website
+  text: `New enquiry from the DRONEXA website
 
 Name: ${payload.name}
 Email: ${payload.email}
@@ -228,7 +228,7 @@ Sent via ${siteUrl}`,
     html: buildEmailShell(`
       ${buildBrandHeader({
         title: "New enquiry received",
-        subtitle: "A new enquiry was submitted on the DOV Drone website.",
+        subtitle: "A new enquiry was submitted on the DRONEXA website.",
       })}
 
       <div style="padding:12px;">
@@ -252,7 +252,7 @@ Sent via ${siteUrl}`,
 
       <div style="padding:12px;border-top:1px solid #e2e8f0;background:#fafcff;font-size:12px;color:#64748b;">
         Sent via
-        <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">DOV Drone website</a>
+        <a href="${siteUrl}" style="color:#2563eb;text-decoration:none;">DRONEXA website</a>
       </div>
     `),
   };
@@ -287,7 +287,7 @@ Email: ${BUSINESS_EMAIL}
 Phone: ${BUSINESS_PHONE_DISPLAY}
 WhatsApp: ${BUSINESS_PHONE_DISPLAY}
 
-DOV Drone
+DRONEXA
 ${siteUrl}`,
     html: buildEmailShell(`
       ${buildBrandHeader({
@@ -333,7 +333,7 @@ ${siteUrl}`,
             href="${siteUrl}"
             style="display:inline-block;padding:11px 16px;border-radius:10px;background:linear-gradient(135deg,#38bdf8 0%,#4f46e5 100%);color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;"
           >
-            Visit DOV Drone
+            Visit DRONEXA
           </a>
         </div>
       </div>
@@ -368,7 +368,7 @@ const getBaseMailOptions = () => {
   }
 
   return {
-    from: `"DOV Drone" <${smtpUser}>`,
+    from: `"DRONEXA" <${smtpUser}>`,
   };
 };
 
@@ -438,7 +438,7 @@ export async function POST(request: Request) {
       const autoReplyMail: SendMailOptions = {
         ...baseMailOptions,
         to: contactPayload.email,
-        subject: "We received your enquiry – DOV Drone",
+  subject: "We received your enquiry – DRONEXA",
         text: autoReply.text,
         html: autoReply.html,
       };
