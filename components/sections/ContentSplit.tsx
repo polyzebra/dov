@@ -52,11 +52,11 @@ export default function ContentSplit({
             {points?.length ? (
               <ul className="space-y-3 text-sm text-slate-600">
                 {points.map((point) => (
-                  <li key={point} className="flex items-center gap-3">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
+                  <li key={point} className="flex items-center gap-x-4">
+                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600 ring-1 ring-sky-200">
                       <CheckCircleIcon className="h-7 w-7" strokeWidth={1.5} />
                     </span>
-                    <span className="leading-normal">{point}</span>
+                    <span className="flex-1 leading-normal">{point}</span>
                   </li>
                 ))}
               </ul>

@@ -67,9 +67,9 @@ const serviceSplits = [
     points: [
       "Interior-to-exterior transitions and neighbourhood context",
       "Edited highlight reels ready for social and portals",
-      "Licensed pilots coordinating with estate agents",
+      "Licensed pilots coordinating with estate agents.",
     ],
-    badge: "Signature service",
+    badge: "Signature Service",
     highlightTitle: "48-hour delivery on priority listings",
     highlightSubtitle: "Edited content prepared for immediate publication.",
   },
