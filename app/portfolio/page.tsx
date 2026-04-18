@@ -10,36 +10,42 @@ const projects = [
     location: "Dublin",
     description: "A premium property film highlighting riverside access and amenity design for a luxury development.",
     tag: "Real Estate",
+    image: "/images/docklands.png",
   },
   {
     title: "Renewable Energy Inspection",
     location: "Cork",
     description: "Thermal-ready aerial capture for a solar farm operator to reduce onsite inspection time.",
     tag: "Inspection",
+    image: "/images/cork.png",
   },
   {
     title: "Wild Atlantic Way Story",
     location: "Galway",
     description: "Tourism board visuals capturing coastline scale and seasonal highlights for digital campaigns.",
     tag: "Tourism",
+    image: "/images/galway.png",
   },
   {
     title: "Hospitality Brand Film",
     location: "Kerry",
     description: "Cinematic approach shots and reveal sequences for a boutique resort relaunch.",
     tag: "Brand",
+    image: "/images/kerry.png",
   },
   {
     title: "City Campus Progress",
     location: "Limerick",
     description: "Monthly progress flights delivering consistent framing and construction updates.",
     tag: "Construction",
+    image: "/images/limerick.png",
   },
   {
     title: "Retail Flagship Opening",
     location: "Belfast",
     description: "Launch-day aerial coverage capturing crowds, signage, and venue scale.",
     tag: "Events",
+    image: "/images/belfast.png",
   },
 ];
 
