@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -27,6 +28,18 @@ const mainNavigation = [
 ];
 
 export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <div
@@ -42,7 +55,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex h-full flex-col px-6 py-6">
+  <div className="flex h-full max-h-screen flex-col overflow-y-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 text-slate-900" onClick={onClose}>
               <span className="relative flex h-10 w-10 items-center justify-center">
