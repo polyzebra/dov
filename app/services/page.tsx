@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   BuildingOffice2Icon,
   CalendarDaysIcon,
@@ -13,46 +14,52 @@ import ContentSplit from "@/components/sections/ContentSplit";
 import FeatureGrid from "@/components/sections/FeatureGrid";
 import PageHero from "@/components/sections/PageHero";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.dronexa.ie/services",
+  },
+};
+
 const services = [
   {
     title: "Real Estate",
     description: "High-end aerial visuals tailored for property marketing and sales launches.",
-  icon: BuildingOffice2Icon,
+    icon: BuildingOffice2Icon,
     tag: "Popular",
     linkLabel: "Explore packages",
   },
   {
     title: "Inspections",
     description: "Roof, infrastructure, and asset inspections with precise documentation.",
-  icon: HomeModernIcon,
+    icon: HomeModernIcon,
     tag: "Precision",
     linkLabel: "View capabilities",
   },
   {
     title: "Aerial Video",
     description: "Cinematic captures for brands, hospitality, and tourism campaigns.",
-  icon: VideoCameraIcon,
+    icon: VideoCameraIcon,
     tag: "Cinematic",
     linkLabel: "See examples",
   },
   {
     title: "Construction Progress",
     description: "Consistent site updates with repeatable flight paths and reporting.",
-  icon: ChartBarIcon,
+    icon: ChartBarIcon,
     tag: "Progress",
     linkLabel: "Plan coverage",
   },
   {
     title: "Events & Activations",
     description: "Dynamic aerial coverage for launches, festivals, and live moments.",
-  icon: CalendarDaysIcon,
+    icon: CalendarDaysIcon,
     tag: "Live",
     linkLabel: "Book coverage",
   },
   {
     title: "Tourism Marketing",
     description: "Showcase destinations and venues with expansive aerial storytelling.",
-  icon: MapPinIcon,
+    icon: MapPinIcon,
     tag: "Ireland",
     linkLabel: "Get a concept",
   },
@@ -105,7 +112,7 @@ const serviceSplits = [
 
 export default function ServicesPage() {
   return (
-  <div className="flex min-h-screen flex-col text-slate-900">
+    <div className="flex min-h-screen flex-col text-slate-900">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -119,12 +126,14 @@ export default function ServicesPage() {
             variant: "secondary",
           }}
         />
+
         <FeatureGrid
           eyebrow="What we deliver"
           title="Drone Solutions for Property, Construction & Infrastructure"
           subtitle="Aerial photography, video production, and drone inspections to help you showcase, monitor, and manage projects across Ireland."
           items={services}
         />
+
         {serviceSplits.map((section, index) => (
           <ContentSplit
             key={section.eyebrow}
@@ -138,12 +147,17 @@ export default function ServicesPage() {
             reverse={index % 2 === 1}
           />
         ))}
+
         <CTASection
           eyebrow="Plan your shoot"
           title="Plan your drone project with confidence"
           subtitle="Tell us your location, goals, and timeline - we’ll send you a clear plan, pricing, and delivery timeframe within one business day."
           primaryAction={{ label: "Start a Project", href: "/contact" }}
-          secondaryAction={{ label: "See Past Work", href: "/portfolio", variant: "secondary" }}
+          secondaryAction={{
+            label: "See Past Work",
+            href: "/portfolio",
+            variant: "secondary",
+          }}
         />
       </main>
       <Footer />
