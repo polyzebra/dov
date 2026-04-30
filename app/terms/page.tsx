@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import PageHero from "@/components/sections/PageHero";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.dronexa.ie/terms",
+  },
+};
 
 export default function TermsPage() {
   return (
