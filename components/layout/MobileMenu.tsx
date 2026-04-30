@@ -44,18 +44,18 @@ export default function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProp
     <>
       <div
         aria-hidden={!isOpen}
-        className={`fixed inset-0 z-40 bg-slate-900/25 backdrop-blur-sm transition-opacity duration-300 ease-out md:hidden ${
+        className={`fixed inset-0 z-40 min-h-dvh h-dvh bg-slate-900/25 backdrop-blur-sm transition-opacity duration-300 ease-out md:hidden ${
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={onClose}
       />
 
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-full w-[85%] max-w-95 transform flex-col bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed right-0 top-0 bottom-0 z-50 flex h-dvh min-h-dvh w-[85%] max-w-95 transform flex-col overflow-y-auto overscroll-contain bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-  <div className="flex h-full max-h-screen flex-col overflow-y-auto px-6 py-6">
+        <div className="flex h-full flex-col px-6 py-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 text-slate-900" onClick={onClose}>
               <span className="relative flex h-10 w-10 items-center justify-center">
